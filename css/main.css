@@ -1,0 +1,2404 @@
+@charset "UTF-8";
+/*Colores*/
+/*Tipografias*/
+body {
+  margin-top: 75px;
+  background-color: #F9F4F4;
+  width: 100%; }
+
+/*Nav*/
+.nav {
+  background-color: #edb2b4;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center; }
+  .nav .nav__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto; }
+  .nav .nav__img {
+    margin: 0;
+    height: 65px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center; }
+  .nav #nav__btn {
+    display: none;
+    margin: 10px; }
+  .nav .nav__icon {
+    display: none;
+    width: 60px;
+    padding: 10px;
+    columns: #0F0808;
+    font-size: 30pt;
+    transition: all 500ns ease; }
+    .nav .nav__icon .nav__icon:hover {
+      background-color: rgba 0, 0, 0, 0.3; }
+  .nav .nav__menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    margin: 0;
+    width: 50%; }
+    .nav .nav__menu .nav__menu-list {
+      width: 100%;
+      height: 80px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: space-evenly; }
+  .nav .nav__button-menu {
+    font: 900 20pt "Kanit", sans-serif;
+    color: #0F0808;
+    letter-spacing: 3px;
+    margin: 10px;
+    height: auto;
+    display: inline-block;
+    transition: all 300ms ease; }
+    .nav .nav__button-menu .nav__button-menu:hover {
+      color: #FFFF;
+      text-decoration: none; }
+  .nav .nav__redes {
+    margin: 0;
+    width: 15%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .nav .nav__redes .nav__redes-list {
+      width: 100%;
+      height: 80px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: space-evenly; }
+  .nav .nav__button-redes {
+    font: 900 20pt "Kanit", sans-serif;
+    color: #0F0808;
+    letter-spacing: 3px;
+    margin: 10px;
+    height: auto;
+    display: inline-block;
+    transition: all 300ms ease; }
+    .nav .nav__button-redes .nav__button-redes:hover {
+      color: #FFFF;
+      text-decoration: none; }
+
+/*index*/
+.banner {
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  transition: all 0.25s;
+  width: 100%; }
+  .banner .banner__cta {
+    position: relative;
+    margin-top: 0;
+    left: 800px;
+    top: 650px; }
+  .banner .banner__button {
+    color: #FFFF;
+    background-color: #e08686;
+    border-color: #FFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    height: 10px;
+    width: 80px;
+    padding: 5px 20px;
+    font-size: 24pt;
+    margin: 30px 0;
+    font-weight: 700;
+    text-decoration: none;
+    align-content: center; }
+
+.banner__button:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px #FFFF;
+  background-color: #0F0808;
+  color: #FFFF;
+  text-decoration: none; }
+
+.opcionesIndex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  height: 400px;
+  background-color: #fbdada; }
+  .opcionesIndex .opcionesIndex__card {
+    height: 300px;
+    width: 300px;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    margin: 0;
+    box-shadow: 15px 15px #edb2b4;
+    transition: all 0.25s;
+    border-radius: 10px; }
+  .opcionesIndex .opcionesIndex__button {
+    color: #FFFF;
+    background-color: #e08686;
+    box-shadow: 5px 5px #0F0808;
+    border-color: #FFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 12px;
+    height: 20px;
+    width: 80px;
+    padding: 5px;
+    font-size: 24pt;
+    font-weight: 600;
+    margin: 0;
+    text-decoration: none; }
+  .opcionesIndex .opcionesIndex__card-sushi {
+    background-image: url(../img/sushi.jpg);
+    background-repeat: no-repeat;
+    border-width: 2px;
+    border-radius: 10px; }
+  .opcionesIndex .opcionesIndex__card-ramen {
+    background-image: url(../img/ramen.jpg);
+    background-repeat: no-repeat;
+    border-width: 2px;
+    border-radius: 10px; }
+  .opcionesIndex .opcionesIndex__card-buns {
+    background-image: url(../img/buns.jpg);
+    background-repeat: no-repeat;
+    border-width: 2px;
+    border-radius: 10px; }
+  .opcionesIndex .opcionesIndex__card-dumplings {
+    background-image: url(../img/dumpling.jpg);
+    background-repeat: no-repeat;
+    border-width: 2px;
+    border-radius: 10px; }
+
+.opcionesIndex__card-sushi:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
+  box-shadow: 15px 15px #e08686; }
+
+.opcionesIndex__card-ramen:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
+  box-shadow: 15px 15px #e08686; }
+
+.opcionesIndex__card-buns:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
+  box-shadow: 15px 15px #e08686; }
+
+.opcionesIndex__card-dumplings:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
+  box-shadow: 15px 15px #e08686; }
+
+.ubicacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; }
+  .ubicacion .ubicacion__titulo {
+    font: 700 28pt "Kanit", sans-serif;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    grid-area: titulo;
+    border-radius: 10px; }
+  .ubicacion .ubicacion__sucursales {
+    margin: 50px 0;
+    width: 500px;
+    display: grid;
+    grid-template-areas: "titulo titulo" "mapa info";
+    grid-template-columns: 500px;
+    grid-template-rows: 60px  600px;
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px; }
+  .ubicacion .ubicacion__mapa {
+    width: 500px;
+    height: 600px;
+    margin: 0;
+    grid-area: mapa;
+    box-shadow: 15px 15px #edb2b4;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; }
+  .ubicacion .ubicacion__locales {
+    background-color: #FFFF;
+    width: 500px;
+    height: 600px;
+    margin: 0;
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 15px 15px #edb2b4;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .ubicacion .ubicacion__locales .ubicacion__locales__info {
+      font: 700 28pt "Kanit", sans-serif;
+      color: #0F0808;
+      margin: 10px; }
+    .ubicacion .ubicacion__locales .ubicacion__locales__info-texto {
+      font: 400 18pt "Kanit", sans-serif;
+      color: #0F0808;
+      margin: 0; }
+
+/*Footer*/
+.footer {
+  background-color: #0F0808;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .footer .footer__locales {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
+    padding: 5px;
+    width: 1300px; }
+  .footer .footer__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center; }
+  .footer .footer__infoLocales {
+    font-size: 14pt;
+    color: #e08686;
+    margin-left: 50px;
+    text-align: center; }
+  .footer .footer__datos {
+    list-style: none;
+    font-size: 12pt;
+    font-weight: 100;
+    color: #FFFF; }
+
+.icofont-google-map {
+  margin-right: 10px; }
+
+.icofont-ui-clock {
+  margin-right: 10px; }
+
+.icofont-phone {
+  margin-right: 10px; }
+
+/*Menu*/
+.menu {
+  margin-bottom: 50px; }
+  .menu .menu__opciones {
+    display: flex;
+    justify-content: center; }
+  .menu .menu__fondo {
+    background-color: #fdecec; }
+  .menu .menu__nombre {
+    font: 700 18pt "Kanit", sans-serif;
+    color: #0F0808;
+    padding-left: 30px;
+    margin-top: 10px;
+    grid-area: ingredientes; }
+  .menu .menu__texto {
+    font: 400 18pt "Kanit", sans-serif;
+    color: #0F0808;
+    padding-left: 30px;
+    margin-top: 10px;
+    grid-area: ingredientes; }
+  .menu .menu__titulo {
+    background-color: #fdecec;
+    color: #0F0808;
+    font: 700 28pt "Kanit", sans-serif;
+    padding: 20px 0 20px 30px;
+    grid-area: titulo;
+    margin: 0; }
+  .menu .menu__sushi {
+    margin: 50px 0 0 50px;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 150px auto;
+    box-shadow: -15px 15px #e08686;
+    border-bottom-right-radius: 10px;
+    grid-template-areas: "titulo fotoSushi" "ingredientes fotoSushi"; }
+  .menu .menu__ramen {
+    margin: 50px 0 0 50px;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 150px auto;
+    box-shadow: -15px 15px #e08686;
+    border-bottom-right-radius: 10px;
+    grid-template-areas: "fotoRamen titulo" "fotoRamen ingredientes"; }
+  .menu .menu__buns {
+    margin: 50px 0 0 50px;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 150px auto;
+    box-shadow: -15px 15px #e08686;
+    border-bottom-right-radius: 10px;
+    grid-template-areas: "titulo fotoBun" "ingredientes fotoBun"; }
+  .menu .menu__dumpling {
+    margin: 50px 0 0 50px;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 150px auto;
+    box-shadow: -15px 15px #e08686;
+    border-bottom-right-radius: 10px;
+    grid-template-areas: "fotoDumpling titulo" "fotoDumpling ingredientes"; }
+
+.veggie {
+  color: #389E38; }
+
+.sushi__foto {
+  margin: 0;
+  grid-area: fotoSushi;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+.ramen__foto {
+  margin: 0;
+  grid-area: fotoRamen;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+.buns__foto {
+  margin: 0;
+  grid-area: fotoBun;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+.dumpling__foto {
+  margin: 0;
+  grid-area: fotoDumpling;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+/*Locales*/
+.sucursales {
+  background-color: #F9F4F4;
+  margin: 75px 0 10px 0;
+  display: flex;
+  justify-content: center; }
+  .sucursales .sucursales__nuestroslocales {
+    background-color: #fdecec;
+    width: 400px;
+    height: 200px;
+    grid-area: nuestros-locales;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px; }
+  .sucursales .sucursales__locales {
+    margin: 25px 50px 50px 50px;
+    padding: 0;
+    display: grid;
+    grid-template-areas: "nuestros-locales" "fotoLanus";
+    grid-template-rows: 200px;
+    box-shadow: 15px 15px #edb2b4;
+    transition: all 0.25s;
+    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .sucursales .sucursales__locales .sucursales__locales__barrios {
+      font-size: 24pt;
+      font-weight: 900;
+      color: #0F0808;
+      margin-top: 20px; }
+    .sucursales .sucursales__locales .sucursales__locales__info {
+      font-size: 14pt;
+      font-weight: 400;
+      margin: 0; }
+      .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lanus {
+        grid-area: fotoLanus;
+        margin: 0; }
+      .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+        grid-area: fotoLomas;
+        margin: 0; }
+      .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+        grid-area: fotoAdrogue;
+        margin: 0; }
+    .sucursales .sucursales__locales .sucursales__img {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+  .sucursales .sucursales__locales:hover {
+    transform: translateY(-15px);
+    box-shadow: 15px 15px #e08686; }
+
+/*FAQ*/
+.faq {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .faq .faq__grilla {
+    margin: 25px 0 50px 0;
+    display: grid;
+    grid-template-areas: "formulario preg-resp";
+    grid-template-rows: 700px;
+    grid-template-columns: 600px;
+    box-shadow: 15px 15px #edb2b4;
+    border-radius: 10px; }
+  .faq .faq__form {
+    background-color: #fbdada;
+    display: flex;
+    justify-content: center;
+    grid-area: formulario; }
+  .faq .faq__preguntas {
+    background-color: #fbdada;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    grid-area: preg-resp;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px; }
+  .faq .faq__pregRta {
+    margin: 0;
+    display: flex;
+    flex-direction: column; }
+  .faq .faq__container {
+    height: 700px;
+    background-color: #fdecec;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px; }
+  .faq .faq__titulo {
+    font: 700 28pt "Kanit", sans-serif;
+    color: #0F0808;
+    margin: 0;
+    background-color: #fdecec;
+    width: 600px;
+    height: auto;
+    grid-area: pregunta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px; }
+  .faq .faq__texto-preguntas {
+    font-size: 16pt;
+    font-weight: 700;
+    color: #0F0808;
+    margin: 0;
+    padding-top: 20px;
+    background-color: #fdecec;
+    width: 600px;
+    height: auto;
+    grid-area: pregunta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px; }
+  .faq .faq__texto-respuestas {
+    font-size: 14pt;
+    font-weight: 500;
+    color: #0F0808;
+    margin: 0;
+    padding-top: 20px;
+    background-color: #fdecec;
+    width: 600px;
+    height: auto;
+    grid-area: pregunta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .faq .formulario {
+    margin: 0;
+    display: flex;
+    flex-direction: column; }
+  .faq .form__completar {
+    width: 600px;
+    height: 700px;
+    background-color: #0F0808;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px; }
+  .faq .form__titulo {
+    font: 700 28pt "Kanit", sans-serif;
+    color: #FFFF;
+    margin: 0;
+    background-color: #0F0808;
+    width: 600px;
+    height: 80px;
+    grid-area: pregunta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px; }
+  .faq .form__label {
+    margin-left: 30px;
+    color: #FFFF; }
+  .faq .form__input {
+    font-size: 18pt;
+    margin: 5px 30px 5px 5px;
+    width: 472px;
+    border-radius: 2px; }
+  .faq .form__input-mail {
+    font-size: 18pt;
+    margin: 5px 30px 5px 5px;
+    width: 492px;
+    border-radius: 2px; }
+  .faq .form__input-textArea {
+    font-size: 14pt;
+    margin: 10px 30px;
+    width: 540px; }
+  .faq .form__cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .faq .form__button-faq {
+    background-color: #e08686;
+    color: #FFFF;
+    font-size: 16pt;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin: 15px;
+    border: 2px solid #FFFF;
+    border-radius: 5px;
+    text-transform: uppercase; }
+
+/*Pedido*/
+.pedido {
+  background-color: #FFFF;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center; }
+  .pedido .pedido__formulario {
+    background-color: #fdecec;
+    margin: 20px 0 50px 0;
+    display: grid;
+    grid-template-areas: "formulario-pedido";
+    grid-template-rows: 1200px;
+    grid-template-columns: 700px;
+    box-shadow: 15px 15px #edb2b4;
+    border-radius: 10px; }
+  .pedido .pedido__container {
+    background-image: #fdecec;
+    margin: 20px 0;
+    display: inline-block; }
+  .pedido .pedido__titulo {
+    font: 700 28pt "Kanit", sans-serif;
+    color: #0F0808;
+    margin: 0;
+    background-color: #fdecec;
+    width: 100%;
+    height: auto;
+    grid-area: pregunta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .pedido .pedido__subtitulo {
+    font: 700 18pt "Kanit", sans-serif;
+    color: #e08686;
+    margin: 20px 30px;
+    grid-area: formulario-pedido; }
+  .pedido .pedido__datos {
+    font: 700 18pt "Kanit", sans-serif;
+    margin-left: 30px;
+    color: #0F0808;
+    grid-area: formulario-pedido; }
+  .pedido .pedido__input-name {
+    font-size: 18pt;
+    margin: 5px 30px;
+    width: 640px; }
+  .pedido .pedido__input-ad {
+    font-size: 16pt;
+    margin: 5px 30px;
+    width: 640px; }
+  .pedido .pedido__input-ph {
+    font-size: 16pt;
+    margin: 5px 30px;
+    width: 640px; }
+  .pedido .pedido__input-mail {
+    font-size: 16pt;
+    margin: 5px 30px;
+    width: 640px; }
+  .pedido .pedido__productos {
+    width: 100px;
+    font-size: 16px; }
+  .pedido .pedido__input-cant {
+    font-size: 16pt;
+    margin: 5px;
+    width: 40px; }
+  .pedido .form__input-textArea1 {
+    width: 640px;
+    margin: 30px; }
+  .pedido .pedido__pago {
+    font: 700 18pt "Kanit", sans-serif;
+    display: inline-block;
+    margin: 5px 5px 10px 30px;
+    padding: 0;
+    grid-area: formulario; }
+  .pedido .pedido__input-cash {
+    margin: 5px 50px 0 0; }
+  .pedido .pedido__nl {
+    font: 400 18pt "Kanit", sans-serif;
+    margin: 0; }
+  .pedido .pedido__cbx {
+    margin-top: 15px; }
+  .pedido .form__cta-pedido {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .pedido .form__button-pedido {
+    background-color: #e08686;
+    color: #FFFF;
+    font-size: 14pt;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin: 15px;
+    border: 2px solid #0F0808;
+    border-radius: 5px;
+    text-transform: uppercase; }
+
+/*Pantallas*/
+@media (max-width: 576px) {
+  body {
+    margin-top: 75px;
+    background-color: #FFFF;
+    width: 100%; }
+  /*index*/
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: 80px; }
+    .nav .nav__logo {
+      width: 85%;
+      height: 80%; }
+    .nav .nav__img {
+      margin-right: 10px;
+      width: 70%;
+      height: 70%; }
+    .nav .nav__menu {
+      background-color: #edb2b4;
+      height: 1px;
+      position: relative;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      margin-top: -110%;
+      transition: all 500ms ease; }
+      .nav .nav__menu .nav__menu-list {
+        background-color: #edb2b4;
+        flex-direction: column;
+        border-top: 1px solid #FFFF;
+        width: 100%;
+        margin-top: 0;
+        font-size: 12pt;
+        height: 150px;
+        padding-left: 15px; }
+    .nav .nav__redes {
+      display: none; }
+    .nav .nav__icon {
+      display: block;
+      margin: 0; }
+    .nav #nav__btn:checked ~ .nav__menu {
+      margin: 0; }
+    .nav .nav__button-menu {
+      font-size: 14pt;
+      margin: 0; }
+  .nav__button {
+    display: flex; }
+  .bodyIndex {
+    background-color: #FFFF;
+    width: 100%;
+    height: auto; }
+  .banner, .banner__cta, .banner__button {
+    display: none; }
+  .opcionesIndex {
+    max-width: 100%;
+    height: 1500px;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F4F4; }
+  .d-block {
+    width: auto;
+    height: 250px; }
+  .ubicacion {
+    display: none; }
+  .footer {
+    width: auto; }
+    .footer .footer__locales {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 12pt;
+      margin: 0; }
+    .footer .footer__infoLocales {
+      font-size: 14pt;
+      margin: 0; }
+    .footer .footer__datos {
+      font-size: 12pt;
+      margin: 0; }
+    .footer .footer__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 10pt;
+      margin: 0; }
+  /*Menú*/
+  .menu {
+    margin-bottom: 50px; }
+    .menu .menu__opciones {
+      display: flex;
+      justify-content: center; }
+    .menu .menu__fondo {
+      background-color: #fdecec; }
+    .menu .menu__nombre {
+      font-size: 16pt;
+      color: #0F0808;
+      padding-left: 30px;
+      margin-top: 10px;
+      grid-area: ingredientes;
+      border-radius: 10px; }
+    .menu .menu__texto {
+      font-size: 12pt;
+      color: #0F0808;
+      padding-left: 30px;
+      margin-top: 10px;
+      grid-area: ingredientes;
+      border-radius: 10px; }
+    .menu .menu__titulo {
+      background-color: #fdecec;
+      color: #0F0808;
+      font-size: 20pt;
+      padding: 20px 0 20px 30px;
+      grid-area: titulo;
+      margin: 0;
+      border-radius: 10px; }
+    .menu .menu__sushi {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 300px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+    .menu .menu__ramen {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 300px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+    .menu .menu__buns {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 300px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+    .menu .menu__dumpling {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 300px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+  .veggie {
+    color: #389E38; }
+  .sushi__foto {
+    display: none; }
+  .ramen__foto {
+    display: none; }
+  .buns__foto {
+    display: none; }
+  .dumpling__foto {
+    display: none; }
+  /*Locales*/
+  .sucursales {
+    background-color: #FFFF;
+    margin: 80px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .sucursales .sucursales__nuestroslocales {
+      background-color: #fdecec;
+      width: auto;
+      height: 150px;
+      grid-area: nuestros-locales;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: 20px; }
+    .sucursales .sucursales__locales {
+      margin: 30px;
+      padding: 0;
+      display: grid;
+      grid-template-areas: "nuestros-locales" "fotoLanus";
+      grid-template-rows: 150px auto;
+      box-shadow: 15px 15px #edb2b4;
+      transition: all 0.25s;
+      border-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+      .sucursales .sucursales__locales .sucursales__locales__barrios {
+        font-size: 16pt;
+        font-weight: 900;
+        color: #0F0808;
+        margin-top: 5px; }
+      .sucursales .sucursales__locales .sucursales__locales__info {
+        font-size: 12pt;
+        font-weight: 400;
+        margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lanus {
+          grid-area: fotoLanus;
+          margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+          grid-area: fotoLomas;
+          margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+          grid-area: fotoAdrogue;
+          margin: 0; }
+      .sucursales .sucursales__locales .sucursales__img {
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; }
+    .sucursales .sucursales__locales:hover {
+      transform: translateY(-15px);
+      box-shadow: 15px 15px #e08686; }
+  /*faq*/
+  .faq {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .faq .faq__grilla {
+      margin: 25px;
+      display: grid;
+      grid-template-areas: "preg-resp preg-resp"  "formulario formulario";
+      grid-template-rows: auto;
+      grid-template-columns: 360px;
+      box-shadow: 15px 15px #edb2b4; }
+    .faq .faq__form {
+      background-color: #fbdada;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      grid-area: formulario;
+      width: 360px; }
+    .faq .faq__preguntas {
+      background-color: #fbdada;
+      margin: 0;
+      grid-area: preg-resp;
+      width: 360px; }
+    .faq .faq__pregRta {
+      margin: 0;
+      width: 360px;
+      height: auto; }
+    .faq .faq__container {
+      height: auto;
+      background-color: #fdecec;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .faq .faq__titulo {
+      font-size: 18pt;
+      color: #0F0808;
+      margin: 0;
+      background-color: #fdecec;
+      width: 360px;
+      height: auto;
+      grid-area: pregunta; }
+    .faq .faq__texto-preguntas {
+      font-size: 12pt;
+      font-weight: 500;
+      color: #0F0808;
+      margin: 0;
+      padding: 5px;
+      background-color: #fdecec;
+      width: 360px;
+      height: auto;
+      grid-area: pregunta;
+      text-align: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    .faq .faq__texto-respuestas {
+      font-size: 10pt;
+      font-weight: 400;
+      color: #0F0808;
+      margin: 0;
+      padding: 5px;
+      background-color: #fdecec;
+      width: 360px;
+      height: auto;
+      grid-area: pregunta;
+      text-align: center; }
+    .faq .formulario {
+      margin: 0;
+      display: flex;
+      flex-direction: column; }
+    .faq .form__completar {
+      width: 360px;
+      height: 550px;
+      background-color: #0F0808;
+      border-top-left-radius: 10px; }
+    .faq .form__titulo {
+      font: 700 28pt "Kanit", sans-serif;
+      color: #FFFF;
+      margin: 0;
+      background-color: #0F0808;
+      width: 360px;
+      height: 80px;
+      grid-area: pregunta;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .faq .form__label {
+      margin: 0 0 0 30px;
+      color: #FFFF; }
+    .faq .form__input {
+      font-size: 16pt;
+      margin: 10px 30px;
+      width: 295px;
+      border-radius: 2px; }
+    .faq .form__input-mail {
+      font-size: 16pt;
+      margin: 10px 30px;
+      width: 295px;
+      border-radius: 2px; }
+    .faq .form__input-textArea {
+      font-size: 18pt;
+      margin: 10px 30px;
+      width: 295px;
+      height: 200px; }
+    .faq .form__cta {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+    .faq .form__button-faq {
+      background-color: #e08686;
+      color: #FFFF;
+      font-size: 12pt;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 5px;
+      margin: 15px;
+      border: 2px solid #FFFF;
+      border-radius: 10px;
+      text-transform: uppercase; }
+  /*Pedido*/
+  .pedido {
+    background-color: #FFFF;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center; }
+    .pedido .pedido__formulario {
+      background-color: #fdecec;
+      margin: 20px 0 50px 0;
+      display: grid;
+      grid-template-areas: "formulario-pedido";
+      grid-template-rows: 1120px;
+      grid-template-columns: 350px;
+      box-shadow: 15px 15px #edb2b4;
+      border-radius: 10px; }
+    .pedido .pedido__container {
+      background-image: #fdecec;
+      margin: 20px 0;
+      display: inline-block; }
+    .pedido .pedido__titulo {
+      font-size: 20pt;
+      color: #0F0808;
+      margin: 0;
+      background-color: #fdecec;
+      width: 100%;
+      height: auto;
+      grid-area: pregunta;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .pedido .pedido__subtitulo {
+      font-size: 18pt;
+      color: #e08686;
+      margin: 20px 30px;
+      grid-area: formulario-pedido;
+      text-align: center; }
+    .pedido .pedido__datos {
+      font-size: 12pt;
+      margin: 0 0 0 30px;
+      color: #0F0808;
+      grid-area: formulario-pedido; }
+    .pedido .pedido__input-name {
+      font-size: 16pt;
+      margin: 5px 30px;
+      width: 290px; }
+    .pedido .pedido__input-ad {
+      font-size: 16pt;
+      margin: 5px 30px;
+      width: 290px; }
+    .pedido .pedido__input-ph {
+      font-size: 16pt;
+      margin: 5px 30px;
+      width: 290px; }
+    .pedido .pedido__input-mail {
+      font-size: 16pt;
+      margin: 5px 30px;
+      width: 290px; }
+    .pedido .pedido__productos {
+      width: 100px;
+      font-size: 14pt; }
+    .pedido .pedido__input-cant {
+      font-size: 16pt;
+      margin: 5px;
+      width: 30px; }
+    .pedido .form__input-textArea1 {
+      width: 290px;
+      margin: 10px 30px; }
+    .pedido .pedido__pago {
+      font-size: 12pt;
+      display: inline-block;
+      margin: 5px 5px 10px 30px;
+      padding: 0;
+      grid-area: formulario; }
+    .pedido .pedido__input-cash {
+      margin: 5px 30px 0 0; }
+    .pedido .pedido__nl {
+      font: 400 18pt "Kanit", sans-serif;
+      margin: 0; }
+    .pedido .pedido__cbx {
+      margin-top: 15px; }
+    .pedido .form__cta-pedido {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .pedido .form__button-pedido {
+      background-color: #e08686;
+      color: #FFFF;
+      font-size: 12pt;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 5px;
+      margin: 5px 30px;
+      border: 2px solid #0F0808;
+      border-radius: 5px;
+      text-transform: uppercase; } }
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 75px; }
+    .nav .nav__logo {
+      display: inline-block;
+      justify-content: flex-start;
+      width: 15%; }
+    .nav .nav__img {
+      height: 40px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: flex-start;
+      width: auto; }
+    .nav .nav__menu-list {
+      width: 300px;
+      display: inline-block;
+      justify-content: center;
+      margin: 0;
+      padding: 0; }
+    .nav .nav__button-menu {
+      font-size: 16pt;
+      letter-spacing: 3px;
+      font-weight: 900;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+      padding: 0; }
+    .nav .nav__redes, .nav .nav__redes-list, .nav .nav__button-redes {
+      display: none; }
+  .banner {
+    display: none; }
+  .banner__button {
+    display: none; }
+  .banner__cta {
+    display: none; }
+  .opcionesIndex {
+    max-width: 100%;
+    height: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F9F4F4; }
+    .opcionesIndex .opcionesIndex__card {
+      height: 300px;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      font-size: 12pt;
+      margin: 10px 0; }
+    .opcionesIndex .opcionesIndex__button {
+      font-size: 16pt; }
+  .ubicacion {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    height: 600px; }
+    .ubicacion .ubicacion__titulo {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      font-size: 20pt;
+      height: 40px;
+      grid-area: titulo; }
+    .ubicacion .ubicacion__mapa {
+      display: none; }
+    .ubicacion .ubicacion__sucursales {
+      margin: 10px;
+      display: grid;
+      grid-template-areas: "titulo" "info";
+      grid-template-columns: 500px;
+      grid-template-rows: 60px  600px; }
+    .ubicacion .ubicacion__locales {
+      display: flex;
+      flex-direction: column;
+      grid-area: info;
+      height: 450px; }
+      .ubicacion .ubicacion__locales .ubicacion__locales__info {
+        font-size: 18pt; }
+      .ubicacion .ubicacion__locales .ubicacion__locales__info-texto {
+        font-size: 14pt; }
+  .footer {
+    width: auto; }
+  .footer__locales, .footer__infoLocales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+  .datos-en-footer {
+    font-size: 0.8em; }
+  /*Menu*/
+  .menu {
+    margin-bottom: 50px; }
+    .menu .menu__opciones {
+      display: flex;
+      justify-content: center; }
+    .menu .menu__fondo {
+      background-color: #fdecec; }
+    .menu .menu__nombre {
+      font-size: 18pt;
+      color: #0F0808;
+      padding-left: 30px;
+      margin-top: 10px;
+      grid-area: ingredientes;
+      border-radius: 10px; }
+    .menu .menu__texto {
+      font-size: 14pt;
+      color: #0F0808;
+      padding-left: 30px;
+      margin-top: 10px;
+      grid-area: ingredientes;
+      border-radius: 10px; }
+    .menu .menu__titulo {
+      background-color: #fdecec;
+      color: #0F0808;
+      font-size: 24pt;
+      padding: 20px 0 20px 30px;
+      grid-area: titulo;
+      margin: 0;
+      border-radius: 10px; }
+    .menu .menu__sushi {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 600px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+    .menu .menu__ramen {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 600px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+    .menu .menu__buns {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 600px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+    .menu .menu__dumpling {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 600px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+  .veggie {
+    color: #389E38; }
+  .sushi__foto {
+    display: none; }
+  .ramen__foto {
+    display: none; }
+  .buns__foto {
+    display: none; }
+  .dumpling__foto {
+    display: none; }
+  /*Locales*/
+  .sucursales {
+    background-color: #FFFF;
+    margin: 80px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .sucursales .sucursales__nuestroslocales {
+      background-color: #fdecec;
+      width: auto;
+      height: 150px;
+      grid-area: nuestros-locales;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px; }
+    .sucursales .sucursales__locales {
+      width: 400px;
+      margin: 30px;
+      padding: 0;
+      display: grid;
+      grid-template-areas: "nuestros-locales" "fotoLanus";
+      grid-template-rows: 150px auto;
+      box-shadow: 15px 15px #edb2b4;
+      transition: all 0.25s;
+      border-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+      .sucursales .sucursales__locales .sucursales__locales__barrios {
+        font-size: 18pt;
+        font-weight: 900;
+        color: #0F0808;
+        margin-top: 5px; }
+      .sucursales .sucursales__locales .sucursales__locales__info {
+        font-size: 14pt;
+        font-weight: 400;
+        margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lanus {
+          grid-area: fotoLanus;
+          margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+          grid-area: fotoLomas;
+          margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+          grid-area: fotoAdrogue;
+          margin: 0; }
+      .sucursales .sucursales__locales .sucursales__img {
+        width: auto;
+        height: auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; }
+    .sucursales .sucursales__locales:hover {
+      display: none; }
+  /*faq*/
+  .faq {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFF; }
+    .faq .faq__grilla {
+      margin: 25px;
+      display: grid;
+      grid-template-areas: "preg-resp preg-resp"  "formulario formulario";
+      grid-template-rows: auto;
+      grid-template-columns: 360px;
+      box-shadow: 15px 15px #edb2b4; }
+    .faq .faq__form {
+      background-color: #fbdada;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      grid-area: formulario;
+      width: 360px; }
+    .faq .faq__preguntas {
+      background-color: #fbdada;
+      margin: 0;
+      grid-area: preg-resp;
+      width: 360px; }
+    .faq .faq__pregRta {
+      margin: 0;
+      width: 360px;
+      height: auto; }
+    .faq .faq__container {
+      height: auto;
+      background-color: #fdecec;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .faq .faq__titulo {
+      font-size: 18pt;
+      color: #0F0808;
+      margin: 0;
+      background-color: #fdecec;
+      width: 360px;
+      height: auto;
+      grid-area: pregunta; }
+    .faq .faq__texto-preguntas {
+      font-size: 12pt;
+      font-weight: 500;
+      color: #0F0808;
+      margin: 0;
+      padding: 5px;
+      background-color: #fdecec;
+      width: 360px;
+      height: auto;
+      grid-area: pregunta;
+      text-align: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    .faq .faq__texto-respuestas {
+      font-size: 10pt;
+      font-weight: 400;
+      color: #0F0808;
+      margin: 0;
+      padding: 5px;
+      background-color: #fdecec;
+      width: 360px;
+      height: auto;
+      grid-area: pregunta;
+      text-align: center; }
+    .faq .formulario {
+      margin: 0;
+      display: flex;
+      flex-direction: column; }
+    .faq .form__completar {
+      width: 360px;
+      height: 550px;
+      background-color: #0F0808;
+      border-top-left-radius: 10px; }
+    .faq .form__titulo {
+      font: 700 28pt "Kanit", sans-serif;
+      color: #FFFF;
+      margin: 0;
+      background-color: #0F0808;
+      width: 360px;
+      height: 80px;
+      grid-area: pregunta;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .faq .form__label {
+      margin: 0 0 0 30px;
+      color: #FFFF; }
+    .faq .form__input {
+      font-size: 14px;
+      margin: 10px 30px;
+      width: 295px;
+      border-radius: 2px; }
+    .faq .form__input-mail {
+      font-size: 14px;
+      margin: 10px 30px;
+      width: 295px;
+      border-radius: 2px; }
+    .faq .form__input-textArea {
+      font-size: 16px;
+      margin: 10px 30px;
+      width: 295px;
+      height: 200px; }
+    .faq .form__cta {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+    .faq .form__button-faq {
+      background-color: #e08686;
+      color: #FFFF;
+      font-size: 12pt;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 5px;
+      margin: 15px;
+      border: 2px solid #FFFF;
+      border-radius: 10px;
+      text-transform: uppercase; } }
+
+@media screen and (min-width: 768px) and (max-width: 922px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 75px; }
+    .nav .nav__logo {
+      display: flex;
+      flex-direction: row;
+      width: 50px; }
+    .nav .nav__img {
+      height: 50px;
+      width: auto;
+      margin-left: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      align-items: center; }
+    .nav .nav__menu {
+      font-size: 12pt;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      width: 70%; }
+      .nav .nav__menu .nav__menu-list {
+        height: auto;
+        padding: 0;
+        font-size: 12pt; }
+    .nav .nav__button-menu {
+      letter-spacing: 3px;
+      font-weight: 900;
+      display: inline-block;
+      justify-content: center;
+      margin: 0;
+      padding: 0; }
+    .nav .nav__redes, .nav .nav__redes-list, .nav .nav__button-redes {
+      display: none; }
+  /*Index*/
+  .banner {
+    height: 380px; }
+  .banner__cta {
+    position: absolute;
+    margin-top: 0;
+    left: 35%;
+    top: 50%; }
+  .banner__button {
+    color: #FFFF;
+    background-color: #e08686;
+    border-color: #FFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    height: 10px;
+    width: 80px;
+    padding: 5px 20px;
+    font-size: 18pt;
+    margin: 30px 0;
+    font-weight: 700; }
+  .opcionesIndex {
+    background-color: #fdecec;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    height: 400px;
+    width: auto; }
+    .opcionesIndex .opcionesIndex__card {
+      height: 300px;
+      width: 80%;
+      display: inline-flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: flex-end;
+      align-content: flex-end;
+      margin: 15px;
+      font-size: 18pt; }
+  .ubicacion {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    height: 600px; }
+    .ubicacion .ubicacion__titulo {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      font-size: 20pt;
+      height: 40px;
+      grid-area: titulo; }
+    .ubicacion .ubicacion__mapa {
+      display: none; }
+    .ubicacion .ubicacion__sucursales {
+      margin: 10px;
+      display: grid;
+      grid-template-areas: "titulo" "info";
+      grid-template-columns: 500px;
+      grid-template-rows: 60px  600px; }
+    .ubicacion .ubicacion__locales {
+      display: flex;
+      flex-direction: column;
+      grid-area: info;
+      height: 450px; }
+      .ubicacion .ubicacion__locales .ubicacion__locales__info {
+        font-size: 18pt; }
+      .ubicacion .ubicacion__locales .ubicacion__locales__info-texto {
+        font-size: 14pt; }
+  .footer {
+    width: auto; }
+  .footer__locales, .footer__infoLocales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14pt; }
+  .footer__datos {
+    font-size: 0.8em; }
+  /*Menu*/
+  .menu {
+    margin-bottom: 50px; }
+    .menu .menu__opciones {
+      display: flex;
+      justify-content: center; }
+    .menu .menu__fondo {
+      background-color: #fdecec; }
+    .menu .menu__nombre {
+      font-size: 18pt;
+      color: #0F0808;
+      padding-left: 30px;
+      margin-top: 10px;
+      grid-area: ingredientes;
+      border-radius: 10px; }
+    .menu .menu__texto {
+      font-size: 14pt;
+      color: #0F0808;
+      padding-left: 30px;
+      margin-top: 10px;
+      grid-area: ingredientes;
+      border-radius: 10px; }
+    .menu .menu__titulo {
+      background-color: #fdecec;
+      color: #0F0808;
+      font-size: 24pt;
+      padding: 20px 0 20px 30px;
+      grid-area: titulo;
+      margin: 0;
+      border-radius: 10px; }
+    .menu .menu__sushi {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 600px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+    .menu .menu__ramen {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 600px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+    .menu .menu__buns {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 600px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+    .menu .menu__dumpling {
+      margin: 30px;
+      display: grid;
+      grid-template-columns: 600px;
+      grid-template-rows: auto;
+      box-shadow: -15px 15px #e08686;
+      grid-template-areas: "titulo titulo" "ingredientes ingredientes";
+      border-radius: 10px; }
+  .veggie {
+    color: #389E38; }
+  .sushi__foto {
+    display: none; }
+  .ramen__foto {
+    display: none; }
+  .buns__foto {
+    display: none; }
+  .dumpling__foto {
+    display: none; }
+  /*Locales*/
+  .sucursales {
+    background-color: #FFFF;
+    margin: 80px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .sucursales .sucursales__nuestroslocales {
+      background-color: #fdecec;
+      width: auto;
+      height: 150px;
+      grid-area: nuestros-locales;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px; }
+    .sucursales .sucursales__locales {
+      width: 400px;
+      margin: 30px;
+      padding: 0;
+      display: grid;
+      grid-template-areas: "nuestros-locales" "fotoLanus";
+      grid-template-rows: 150px auto;
+      box-shadow: 15px 15px #edb2b4;
+      transition: all 0.25s;
+      border-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+      .sucursales .sucursales__locales .sucursales__locales__barrios {
+        font-size: 18pt;
+        font-weight: 900;
+        color: #0F0808;
+        margin-top: 5px; }
+      .sucursales .sucursales__locales .sucursales__locales__info {
+        font-size: 14pt;
+        font-weight: 400;
+        margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lanus {
+          grid-area: fotoLanus;
+          margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+          grid-area: fotoLomas;
+          margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+          grid-area: fotoAdrogue;
+          margin: 0; }
+      .sucursales .sucursales__locales .sucursales__img {
+        width: auto;
+        height: auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; }
+    .sucursales .sucursales__locales:hover {
+      display: none; }
+  /*faq*/
+  .faq {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFF; }
+    .faq .faq__grilla {
+      margin: 25px;
+      display: grid;
+      grid-template-areas: "preg-resp preg-resp"  "formulario formulario";
+      grid-template-rows: auto;
+      grid-template-columns: 700px;
+      box-shadow: 15px 15px #edb2b4; }
+    .faq .faq__form {
+      background-color: #fbdada;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      grid-area: formulario;
+      width: 700px; }
+    .faq .faq__preguntas {
+      background-color: #fbdada;
+      margin: 0;
+      grid-area: preg-resp;
+      width: 700px; }
+    .faq .faq__pregRta {
+      margin: 0;
+      width: 700px;
+      height: auto; }
+    .faq .faq__container {
+      height: auto;
+      background-color: #fdecec;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .faq .faq__titulo {
+      font-size: 24pt;
+      color: #0F0808;
+      margin: 0;
+      background-color: #fdecec;
+      width: 700px;
+      height: auto;
+      grid-area: pregunta; }
+    .faq .faq__texto-preguntas {
+      font-size: 18pt;
+      font-weight: 600;
+      color: #0F0808;
+      margin: 0;
+      padding: 5px;
+      background-color: #fdecec;
+      width: 700px;
+      height: auto;
+      grid-area: pregunta;
+      text-align: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    .faq .faq__texto-respuestas {
+      font-size: 16pt;
+      font-weight: 400;
+      color: #0F0808;
+      margin: 0;
+      padding: 5px;
+      background-color: #fdecec;
+      width: 700px;
+      height: auto;
+      grid-area: pregunta;
+      text-align: center; }
+    .faq .formulario {
+      margin: 0;
+      display: flex;
+      flex-direction: column; }
+    .faq .form__completar {
+      width: 700px;
+      height: 700px;
+      background-color: #0F0808;
+      border-top-left-radius: 10px; }
+    .faq .form__titulo {
+      font: 700 28pt "Kanit", sans-serif;
+      color: #FFFF;
+      margin: 0;
+      background-color: #0F0808;
+      width: 700px;
+      height: 80px;
+      grid-area: pregunta;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .faq .form__label {
+      margin: 0 0 0 30px;
+      color: #FFFF;
+      font-size: 16pt; }
+    .faq .form__input {
+      font-size: 16pt;
+      margin: 5px 30px;
+      width: 635px;
+      border-radius: 2px; }
+    .faq .form__input-mail {
+      font-size: 16pt;
+      margin: 5px 30px;
+      width: 635px;
+      border-radius: 2px; }
+    .faq .form__input-textArea {
+      font-size: 18pt;
+      margin: 10px 30px;
+      width: 635px;
+      height: 230px; }
+    .faq .form__cta {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+    .faq .form__button-faq {
+      background-color: #e08686;
+      color: #FFFF;
+      font-size: 16pt;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 5px;
+      margin: 15px;
+      border: 2px solid #FFFF;
+      border-radius: 10px;
+      text-transform: uppercase; } }
+
+@media screen and (min-width: 922px) and (max-width: 1200px) {
+  .nav {
+    background-color: #edb2b4;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row; }
+    .nav .nav__logo {
+      display: flex;
+      flex-direction: row;
+      width: auto; }
+    .nav .nav__img {
+      height: 50px;
+      width: auto;
+      margin-left: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-content: center;
+      align-items: center; }
+    .nav .nav__menu {
+      font-size: 13px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      width: 60%; }
+      .nav .nav__menu .nav__menu-list {
+        height: auto;
+        padding: 0;
+        font-size: 14px; }
+    .nav .nav__button-menu {
+      letter-spacing: 3px;
+      font-weight: 900;
+      display: inline-block;
+      justify-content: center;
+      margin: 0;
+      padding: 0; }
+    .nav .nav__redes {
+      margin: 0;
+      width: 20%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .nav .nav__redes .nav__redes-list {
+        height: auto;
+        padding: 0;
+        font-size: 14px; }
+    .nav .nav__button-redes {
+      font-size: 20pt;
+      letter-spacing: 3px;
+      font-weight: 900;
+      display: inline-block;
+      margin: 0; }
+  .banner__cta {
+    display: none; }
+  .banner__button {
+    display: none; }
+  .opcionesIndex {
+    background-color: #fdecec;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    height: 400px;
+    width: auto; }
+  .opcionesIndex__card {
+    height: auto;
+    width: auto;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    margin: 15px;
+    font-size: 18pt; }
+  .opcionesIndex__card-sushi {
+    background-image: url(../img/sushi922.jpg);
+    background-repeat: no-repeat; }
+  .opcionesIndex__card-ramen {
+    background-image: url(../img/ramen922.jpg);
+    background-repeat: no-repeat; }
+  .opcionesIndex__card-buns {
+    background-image: url(../img/bun922.jpg);
+    background-repeat: no-repeat; }
+  .opcionesIndex__card-dumplings {
+    background-image: url(../img/dumpling922.jpg);
+    background-repeat: no-repeat; }
+  .ubicacion {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    height: 600px; }
+    .ubicacion .ubicacion__titulo {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      font-size: 20pt;
+      height: 40px;
+      grid-area: titulo; }
+    .ubicacion .ubicacion__mapa {
+      display: none; }
+    .ubicacion .ubicacion__sucursales {
+      margin: 10px;
+      display: grid;
+      grid-template-areas: "titulo" "info";
+      grid-template-columns: 500px;
+      grid-template-rows: 60px  600px; }
+    .ubicacion .ubicacion__locales {
+      display: flex;
+      flex-direction: column;
+      grid-area: info;
+      height: 450px; }
+      .ubicacion .ubicacion__locales .ubicacion__locales__info {
+        font-size: 18pt; }
+      .ubicacion .ubicacion__locales .ubicacion__locales__info-texto {
+        font-size: 14pt; }
+  /*Menu*/
+  .menu {
+    margin-bottom: 50px;
+    background-color: #FFFF; }
+    .menu .menu__opciones {
+      display: flex;
+      justify-content: center; }
+    .menu .menu__fondo {
+      background-color: #fdecec; }
+    .menu .menu__nombre {
+      font: 700 18pt "Kanit", sans-serif;
+      color: #0F0808;
+      padding-left: 30px;
+      margin-top: 10px;
+      grid-area: ingredientes; }
+    .menu .menu__texto {
+      font-size: 14pt;
+      color: #0F0808;
+      padding-left: 30px;
+      margin-top: 10px;
+      grid-area: ingredientes; }
+    .menu .menu__titulo {
+      background-color: #fdecec;
+      color: #0F0808;
+      font: 700 28pt "Kanit", sans-serif;
+      padding: 20px 0 20px 30px;
+      grid-area: titulo;
+      margin: 0; }
+    .menu .menu__sushi {
+      margin: 50px 0 0 50px;
+      display: grid;
+      grid-template-columns: 500px 500px;
+      grid-template-rows: 100px auto;
+      box-shadow: -15px 15px #e08686;
+      border-bottom-right-radius: 10px;
+      grid-template-areas: "titulo fotoSushi" "ingredientes fotoSushi"; }
+    .menu .menu__ramen {
+      margin: 50px 0 0 50px;
+      display: grid;
+      grid-template-columns: 500px 500px;
+      grid-template-rows: 100px auto;
+      box-shadow: -15px 15px #e08686;
+      border-bottom-right-radius: 10px;
+      grid-template-areas: "fotoRamen titulo" "fotoRamen ingredientes"; }
+    .menu .menu__buns {
+      margin: 50px 0 0 50px;
+      display: grid;
+      grid-template-columns: 500px 500px;
+      grid-template-rows: 100px auto;
+      box-shadow: -15px 15px #e08686;
+      border-bottom-right-radius: 10px;
+      grid-template-areas: "titulo fotoBun" "ingredientes fotoBun"; }
+    .menu .menu__dumpling {
+      margin: 50px 0 0 50px;
+      display: grid;
+      grid-template-columns: 500px 500px;
+      grid-template-rows: 100px auto;
+      box-shadow: -15px 15px #e08686;
+      border-bottom-right-radius: 10px;
+      grid-template-areas: "fotoDumpling titulo" "fotoDumpling ingredientes"; }
+  .veggie {
+    color: #389E38; }
+  .sushi__foto {
+    margin: 0;
+    grid-area: fotoSushi;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 500px;
+    height: auto; }
+  .ramen__foto {
+    margin: 0;
+    grid-area: fotoRamen;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 500px;
+    height: auto; }
+  .buns__foto {
+    margin: 0;
+    grid-area: fotoBun;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 500px;
+    height: auto; }
+  .dumpling__foto {
+    margin: 0;
+    grid-area: fotoDumpling;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 500px;
+    height: auto; }
+  /*Locales*/
+  .sucursales {
+    background-color: #F9F4F4;
+    margin: 75px 0 150px 0;
+    display: flex;
+    justify-content: center; }
+    .sucursales .sucursales__nuestroslocales {
+      background-color: #fdecec;
+      width: 350px;
+      height: 200px;
+      grid-area: nuestros-locales;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: 20px; }
+    .sucursales .sucursales__locales {
+      margin: 30px 15px;
+      padding: 0;
+      display: grid;
+      grid-template-areas: "nuestros-locales" "fotoLanus";
+      grid-template-rows: auto;
+      grid-template-columns: 350px;
+      box-shadow: 15px 15px #edb2b4;
+      transition: all 0.25s;
+      border-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+      .sucursales .sucursales__locales .sucursales__locales__barrios {
+        font-size: 20pt;
+        font-weight: 900;
+        color: #0F0808;
+        margin-top: 20px; }
+      .sucursales .sucursales__locales .sucursales__locales__info {
+        font-size: 14pt;
+        font-weight: 400;
+        margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lanus {
+          grid-area: fotoLanus;
+          margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+          grid-area: fotoLomas;
+          margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+          grid-area: fotoAdrogue;
+          margin: 0; }
+      .sucursales .sucursales__locales .sucursales__img {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 350px; }
+    .sucursales .sucursales__locales:hover {
+      transform: translateY(-15px);
+      box-shadow: 15px 15px #e08686; }
+  /*faq*/
+  .faq {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFF; }
+    .faq .faq__grilla {
+      margin: 25px;
+      display: grid;
+      grid-template-areas: "preg-resp preg-resp"  "formulario formulario";
+      grid-template-rows: auto;
+      grid-template-columns: 700px;
+      box-shadow: 15px 15px #edb2b4; }
+    .faq .faq__form {
+      background-color: #fbdada;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      grid-area: formulario;
+      width: 700px; }
+    .faq .faq__preguntas {
+      background-color: #fbdada;
+      margin: 0;
+      grid-area: preg-resp;
+      width: 700px; }
+    .faq .faq__pregRta {
+      margin: 0;
+      width: 700px;
+      height: auto; }
+    .faq .faq__container {
+      height: auto;
+      background-color: #fdecec;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .faq .faq__titulo {
+      font-size: 24pt;
+      color: #0F0808;
+      margin: 0;
+      background-color: #fdecec;
+      width: 700px;
+      height: auto;
+      grid-area: pregunta; }
+    .faq .faq__texto-preguntas {
+      font-size: 18pt;
+      font-weight: 600;
+      color: #0F0808;
+      margin: 0;
+      padding: 5px;
+      background-color: #fdecec;
+      width: 700px;
+      height: auto;
+      grid-area: pregunta;
+      text-align: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    .faq .faq__texto-respuestas {
+      font-size: 16pt;
+      font-weight: 400;
+      color: #0F0808;
+      margin: 0;
+      padding: 5px;
+      background-color: #fdecec;
+      width: 700px;
+      height: auto;
+      grid-area: pregunta;
+      text-align: center; }
+    .faq .formulario {
+      margin: 0;
+      display: flex;
+      flex-direction: column; }
+    .faq .form__completar {
+      width: 700px;
+      height: 600px;
+      background-color: #0F0808;
+      border-top-left-radius: 10px; }
+    .faq .form__titulo {
+      font: 700 28pt "Kanit", sans-serif;
+      color: #FFFF;
+      margin: 0;
+      background-color: #0F0808;
+      width: 700px;
+      height: 80px;
+      grid-area: pregunta;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .faq .form__label {
+      margin: 0 0 0 30px;
+      color: #FFFF;
+      font-size: 16pt; }
+    .faq .form__input {
+      font-size: 18px;
+      margin: 10px 30px;
+      width: 635px;
+      border-radius: 2px; }
+    .faq .form__input-mail {
+      font-size: 18px;
+      margin: 10px 30px;
+      width: 635px;
+      border-radius: 2px; }
+    .faq .form__input-textArea {
+      font-size: 18pt;
+      margin: 10px 30px;
+      width: 635px;
+      height: 230px; }
+    .faq .form__cta {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+    .faq .form__button-faq {
+      background-color: #e08686;
+      color: #FFFF;
+      font-size: 16pt;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 5px;
+      margin: 15px;
+      border: 2px solid #FFFF;
+      border-radius: 10px;
+      text-transform: uppercase; } }
+
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  /*index*/
+  .nav {
+    background-color: #edb2b4;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row; }
+    .nav .nav__logo {
+      display: flex;
+      flex-direction: row;
+      width: auto; }
+    .nav .nav__menu {
+      font-size: 13px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      width: 60%; }
+      .nav .nav__menu .nav__menu-list {
+        height: auto;
+        padding: 0;
+        font-size: 14px; }
+    .nav .nav__button-menu {
+      font-size: 24pt;
+      letter-spacing: 3px;
+      font-weight: 900;
+      display: inline-block;
+      margin: 0;
+      padding: 0; }
+    .nav .nav__button-menu :hover {
+      color: #FFFF; }
+    .nav .nav__redes {
+      margin: 0;
+      width: 20%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .nav .nav__redes .nav__redes-list {
+        height: auto;
+        padding: 0;
+        font-size: 14px; }
+    .nav .nav__button-redes {
+      font-size: 24pt;
+      letter-spacing: 3px;
+      font-weight: 900;
+      display: inline-block;
+      margin: 0;
+      padding: 0; }
+    .nav .nav__button-redes :hover {
+      color: #FFFF; }
+  .carousel-inner, .slide {
+    width: 100%;
+    height: auto; }
+  .banner {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    transition: all 0.25s;
+    width: 100%; }
+    .banner .banner__cta {
+      position: relative;
+      margin-top: 0;
+      left: 520px;
+      top: 450px; }
+    .banner .banner__button {
+      color: #FFFF;
+      background-color: #e08686;
+      border-color: #FFFF;
+      border-width: 2px;
+      border-style: solid;
+      border-radius: 5px;
+      height: 10px;
+      width: 80px;
+      padding: 5px 20px;
+      font-size: 24pt;
+      margin: 30px 0;
+      font-weight: 700;
+      text-decoration: none; }
+  .banner__button:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px #FFFF;
+    background-color: #0F0808;
+    color: #FFFF;
+    text-decoration: none; }
+  /*locales*/
+  .sucursales {
+    background-color: #F9F4F4;
+    margin: 75px 0 10px 0;
+    display: flex;
+    justify-content: center; }
+    .sucursales .sucursales__nuestroslocales {
+      background-color: #fdecec;
+      width: 400px;
+      height: 200px;
+      grid-area: nuestros-locales;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: 20px; }
+    .sucursales .sucursales__locales {
+      margin: 20px;
+      padding: 0;
+      display: grid;
+      grid-template-areas: "nuestros-locales" "fotoLanus";
+      grid-template-rows: 200px;
+      box-shadow: 15px 15px #edb2b4;
+      transition: all 0.25s;
+      border-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+      .sucursales .sucursales__locales .sucursales__locales__barrios {
+        font-size: 24pt;
+        font-weight: 900;
+        color: #0F0808;
+        margin-top: 20px; }
+      .sucursales .sucursales__locales .sucursales__locales__info {
+        font-size: 14pt;
+        font-weight: 400;
+        margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lanus {
+          grid-area: fotoLanus;
+          margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+          grid-area: fotoLomas;
+          margin: 0; }
+        .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lomas {
+          grid-area: fotoAdrogue;
+          margin: 0; }
+      .sucursales .sucursales__locales .sucursales__img {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; }
+    .sucursales .sucursales__locales:hover {
+      transform: translateY(-15px);
+      box-shadow: 15px 15px #e08686; } }

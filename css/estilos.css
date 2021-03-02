@@ -1,0 +1,788 @@
+/*Body*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Textos General*/
+h2{
+    color: #0f0808;
+    font-size: 32pt;
+    margin: 20px 0 50px 0;
+}
+p {
+    color: #0f0808;
+    font-size: 16pt;
+}
+a {
+    color: #0F0808;
+}
+
+/*Pedido*/
+.productosCarrito {
+    font-size: 18px;
+    margin: 20px 10px 20px 0;
+    grid-area: formulario-pedido;
+}
+/*footer*/
+
+footer ul li{
+    color:white;
+    font-size: 14px;
+    margin-left: 50px;
+    list-style: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 3px;
+}
+
+/*Pantallas*/
+
+@media (max-width: 576px){
+    .bodyIndex {
+        background-color: #fbdada;
+        width: 100%;
+        height: auto;
+    }
+    .logo {
+        width: 169px;
+        margin: 0;
+    }
+    .logo-nav {
+        height: 80px;
+        width: auto;
+        margin: 0;
+    }
+    .navBar{
+        background-color:  #edb2b4;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .menuNav,  ul .nav-button {
+        display: none;
+    }
+    .banner {
+        margin-top: 100px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+    .haceTuPedido {
+        font-weight: 500;
+        margin: 100px;
+    }
+    .pedido {
+        color: white;
+        background-color: #e08686;
+        border-color: white;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        height: 10px;
+        width: 80px;
+        padding: 5px 20px;
+        font-size: 20pt;
+        margin: 30px 0;
+    }
+    .menu-button {
+        display: flex;
+    }
+    .redes-sociales {
+        display: none
+    }
+    .productos-index {
+        max-width: 100%;
+        height: 1500px;
+        padding: auto;
+        display: flex;
+        flex-direction: column;
+    } 
+    .carousel-inner, .slide {
+        display: none;
+    }
+    .ubicacion {
+        display: none;
+    }
+    .sushi-index .ramen-index .bun-index .dumplings-index {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .h2index {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    .distribucion-footer {
+        width: auto;
+    }
+    .localsblock, .localesFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .bodyIndex {
+        background-color: #fbdada;
+        width: 100%;
+        height: auto;
+    }
+    .logo {
+        height: 50px;
+        margin-left: 15px;
+    }
+    .logo-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+        width: 200px;
+    }
+    .navBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 75px;
+    }
+    .menuNav {
+        font-size: 16pt;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        width: 430px;
+    }
+    .menuNav ul {
+        height: auto;
+        padding: 0;
+    }
+    .menuNav ul li {
+        height: auto;
+        margin: 8px;
+        padding: 0;
+        font-size: 16pt;
+    }
+    .nav-button {
+        font-size: 16pt;
+        letter-spacing: 3px;
+        font-weight: 900;
+        display: inline-block;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    .redes-sociales, .redes-sociales ul {
+        display: none;
+    }
+    .banner {
+        height: 350px;
+
+    }
+    .pedido {
+        color: white;
+        background-color: #e08686;
+        border-color: white;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        height: 10px;
+        width: auto;
+        padding: 5px 20px;
+        font-size: 18pt;
+        margin: 30px 0;
+        font-weight: 700;
+    }
+    .haceTuPedido {
+        position: absolute;
+        margin-top: 0;
+        left: 240px;
+        top: 220px;
+    }
+    .productos-index {
+        width: 100%;
+        height: 400px;
+        padding: auto;
+        display: flex;
+        flex-direction: row;
+    } 
+    .sushi-index, .ramen-index, .bun-index, .dumplings-index {
+        height: 75%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        font-size: 12pt;
+    }
+    .sushiIndex, .ramenIndex, .bunIndex, .dumplingsIndex {
+        font-size: 18pt;
+    }
+    .h2index {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        font-size: 20pt;
+        height: 40px;
+    }
+    .ubicacion {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        height: 680px;
+    }
+    .mapa {
+        display: none;
+    }
+    .sucursales-index{
+        margin: 10px;
+        display: grid;
+        grid-template-areas:
+        "lanus"
+        "lomas"
+        "adrogue";
+        grid-template-rows: 200px;
+        grid-template-columns: 500px;
+        justify-content: center;
+        align-content: center;
+    }
+    .locales {
+        font-size: 16pt;
+    }
+
+    .distribucion-footer {
+        width: auto;
+    }
+    .localsblock, .localesFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14pt;
+    }
+    .datos-en-footer {
+        font-size: 0.8em;
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 922px) {
+    .bodyIndex {
+        background-color: #fbdada;
+        width: 100%;
+        height: auto;
+    }
+    .logo {
+        height: 50px;
+        margin-left: 15px;
+    }
+    .logo-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+        width: 200px;
+    }
+    .navBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 75px;
+    }
+    .menuNav {
+        font-size: 13px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        width: 430px;
+    }
+    .menuNav ul {
+        height: auto;
+        padding: 0;
+    }
+    .menuNav ul li {
+        height: auto;
+        margin: 8px;
+        padding: 0;
+        font-size: 16pt;
+    }
+    .nav-button {
+        letter-spacing: 3px;
+        font-weight: 900;
+        display: inline-block;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    .redes-sociales, .redes-sociales ul {
+        display: none;
+    }
+    .banner {
+        height: 380px;
+    }
+    .haceTuPedido {
+        position: absolute;
+        margin-top: 0;
+        left: 300px;
+        top: 260px;
+    }
+    .pedido {
+        color: white;
+        background-color: #e08686;
+        border-color: white;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        height: 10px;
+        width: 80px;
+        padding: 5px 20px;
+        font-size: 18pt;
+        margin: 30px 0;
+        font-weight: 700;
+    }
+    .productos-index {
+        background-color: #fdecec;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+        height: 400px;
+        width: auto;
+        
+    }
+    .sushi-index {
+        background-image: url(../img/sushi922.jpg);
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 150px;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin: 0;     
+    }
+    .ramen-index {
+        background-image: url(../img/ramen922.jpg);
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 150px;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin: 0;     
+    }
+    .bun-index {
+        background-image: url(../img/bun922.jpg);
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 150px;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin: 0;  
+    }
+    .dumplings-index {
+        background-image: url(../img/dumpling922.jpg);
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 150px;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin: 0;     
+    }
+    .sushiIndex, .ramenIndex, .bunIndex, .dumplingsIndex {
+        font-size: 18pt;
+    }
+    .h2index {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        font-size: 20pt;
+        height: 40px;
+    }
+    .ubicacion {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        height: 680px;
+    }
+    .mapa {
+        display: none;
+    }
+    .sucursales-index{
+        margin: 10px;
+        display: grid;
+        grid-template-areas:
+        "lanus"
+        "lomas"
+        "adrogue";
+        grid-template-rows: 200px;
+        grid-template-columns: 500px;
+        justify-content: center;
+        align-content: center;
+    }
+    .locales {
+        font-size: 16pt;
+    }
+
+    .distribucion-footer {
+        width: auto;
+    }
+    .localsblock, .localesFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14pt;
+    }
+    .datos-en-footer {
+        font-size: 0.8em;
+    }
+
+}
+@media screen and (min-width: 922px) and (max-width: 1200px){
+    
+    .logo {
+        margin-left: 20px; 
+    }
+    .logo-nav {
+        width: 20%;
+        height: 100%;
+    }
+    .navBar{
+        background-color:  #edb2b4;
+        height: 75px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .menuNav{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-evenly;
+        width: 60%;
+        margin: 0;
+        
+    }
+    .menuNav ul {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }  
+    .menuNav li {
+        margin: 0 5px;
+        padding: 20px;
+        font-size: 16pt;
+    
+    }
+    .nav-button {
+        font-size: 20pt;
+        letter-spacing: 3px;
+        font-weight: 900;
+        display: inline-block;
+        margin: 0;
+    }
+    .nav-button li {
+        padding: 0px;
+    }
+    
+    .colorNav {
+        color:  #0f0808;  
+    }
+    .nav-button :hover {
+        color: white;
+    }
+    .redes-sociales {
+        margin: 0;
+        width: 20%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .menuNav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 300px;
+    } 
+    .rr-ss {
+        padding: 5px;
+        font-size: 20px;
+    }
+    .haceTuPedido {
+        position: absolute;
+        margin-top: 0;
+        left: 350px;
+        top: 300px;
+    }
+    .pedido {
+        color: white;
+        background-color: #e08686;
+        border-color: white;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        height: 10px;
+        width: 80px;
+        padding: 5px 20px;
+        font-size: 18pt;
+        margin: 30px 0;
+        font-weight: 700;
+    }
+    .productos-index {
+        background-color: #fdecec;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+        height: 400px;
+        width: auto;
+        
+    }
+    .sushi-index {
+        background-image: url(../img/sushi922.jpg);
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 150px;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin: 0;     
+    }
+    .ramen-index {
+        background-image: url(../img/ramen922.jpg);
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 150px;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin: 0;     
+    }
+    .bun-index {
+        background-image: url(../img/bun922.jpg);
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 150px;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin: 0;  
+    }
+    .dumplings-index {
+        background-image: url(../img/dumpling922.jpg);
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 150px;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin: 0;     
+    }
+    .sushiIndex, .ramenIndex, .bunIndex, .dumplingsIndex {
+        font-size: 18pt;
+    }
+    .h2index {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        font-size: 20pt;
+        height: 40px;
+    }
+    .ubicacion {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        height: 680px;
+    }
+    .mapa {
+        display: none;
+    }
+    .sucursales-index{
+        margin: 10px;
+        display: grid;
+        grid-template-areas:
+        "lanus"
+        "lomas"
+        "adrogue";
+        grid-template-rows: 200px;
+        grid-template-columns: 500px;
+        justify-content: center;
+        align-content: center;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1200px) and (max-width:1500px){
+    .logo {
+        margin-left: 20px;
+        height: 90%; 
+    }
+    .logo-nav {
+        width: 20%;
+    }
+    .navBar{
+        background-color:  #edb2b4;
+        height: 75px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .menuNav{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-evenly;
+        width: 60%;
+        margin: 0;
+        
+    }
+    .menuNav ul {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }  
+    .menuNav li {
+        margin: 0 5px;
+        padding: 20px;
+        font-size: 20pt;
+    
+    }
+    .nav-button {
+        font-size: 24pt;
+        letter-spacing: 3px;
+        font-weight: 900;
+        display: inline-block;
+        margin: 0;
+    }
+    .nav-button li {
+        padding: 0px;
+    }
+    
+    .colorNav {
+        color:  #0f0808;  
+    }
+    .nav-button :hover {
+        color: white;
+    }
+    .redes-sociales {
+        margin: 0;
+        width: 20%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .menuNav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 300px;
+    } 
+    .rr-ss {
+        padding: 5px;
+        font-size: 20px;
+    }
+    .carousel-inner, .slide {
+        width: 100%;
+        height: auto;
+    }
+    .haceTuPedido {
+        position: absolute;
+        margin-top: 0;
+        left: 450px;
+        top: 400px;
+    }
+    .pedido {
+        color: white;
+        background-color: #e08686;
+        border-color: white;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        height: 10px;
+        width: 80px;
+        padding: 5px 20px;
+        font-size: 24pt;
+        margin: 30px 0;
+        font-weight: 700;
+    }
+}    

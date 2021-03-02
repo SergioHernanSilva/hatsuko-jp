@@ -1,0 +1,2892 @@
+    /*Colores*/
+$rosa-nav: #edb2b4;
+$rosa-claro: #fdecec;
+$rosa-light: #F9F4F4;
+$rosa-pages: #fbdada;
+$rosa-button: #e08686;
+$negro: #0F0808;
+$blanco:#FFFF;
+
+    /*Tipografias*/
+$nav-font: 900 20pt 'Kanit', sans-serif;
+$titulos: 700 28pt 'Kanit', sans-serif;
+$textos: 400 18pt 'Kanit', sans-serif;
+$textos-destacados: 700 18pt 'Kanit', sans-serif;
+$formulario: 600 18pt 'Kanit', sans-serif;
+
+body {
+    margin-top: 75px;
+    background-color: $rosa-light;
+    width: 100%;
+}
+
+    /*Nav*/ 
+.nav {
+    background-color: $rosa-nav;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+
+    .nav__logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    .nav__img {
+        margin: 0;
+        height: 65px;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+    #nav__btn {
+        display: none;
+        margin: 10px;
+    }
+    .nav__icon {
+        display: none;
+        width: 60px;
+        padding: 10px;
+        columns: $negro;
+        font-size: 30pt;
+        transition: all 500ns ease;
+    
+        .nav__icon:hover {
+            background-color: rgba (0,0,0,0.3);
+        }
+    }
+    .nav__menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-evenly;
+        margin: 0;
+        width: 50%;
+
+        @mixin listas {
+            width: 100%;
+            height: 80px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-evenly;
+        }
+        .nav__menu-list{
+            @include listas;
+        }
+    }
+    .nav__button-menu {
+        font: $nav-font;
+        color: $negro;
+        letter-spacing: 3px;
+        margin: 10px;
+        height: auto;
+        display: inline-block;
+        transition: all 300ms ease;
+    
+        @mixin hover {
+            color: $blanco;
+            text-decoration: none;
+        }
+        .nav__button-menu:hover {
+            @include hover;
+        }
+    }
+    .nav__redes {
+        margin: 0;
+        width: 15%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+        @mixin listas {
+            width: 100%;
+            height: 80px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-evenly;
+        }
+        .nav__redes-list{
+            @include listas;
+        }
+    }
+    .nav__button-redes {
+        font: $nav-font;
+        color: $negro;
+        letter-spacing: 3px;
+        margin: 10px;
+        height: auto;
+        display: inline-block;
+        transition: all 300ms ease;
+    
+        @mixin hover {
+            color: $blanco;
+            text-decoration: none;
+        }
+        .nav__button-redes:hover {
+            @include hover;
+        }
+    }
+}
+
+    /*index*/
+.banner {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    transition: all 0.25s;
+    width: 100%;
+
+    .banner__cta {
+        position: relative;
+        margin-top: 0;
+        left: 800px;
+        top: 650px;
+    }
+    .banner__button {
+        color:$blanco;
+        background-color: $rosa-button;
+        border-color:$blanco;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 20px;
+        height: 10px;
+        width: 80px;
+        padding: 5px 20px;
+        font-size: 24pt;
+        margin: 30px 0;
+        font-weight: 700;
+        text-decoration: none;
+        align-content: center;
+    }
+}
+.banner__button:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px $blanco;
+    background-color:  $negro;
+    color: $blanco;
+    text-decoration: none;
+}
+.opcionesIndex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    height: 400px;
+    background-color: $rosa-pages;
+
+    .opcionesIndex__card {
+        height: 300px;
+        width: 300px;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin: 0;
+        box-shadow: 15px 15px $rosa-nav;
+        transition: all 0.25s;
+        border-radius: 10px;
+    }
+    .opcionesIndex__button {
+        color: $blanco;
+        background-color: $rosa-button;
+        box-shadow: 5px 5px  $negro;
+        border-color:$blanco;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 12px;
+        height: 20px;
+        width: 80px;
+        padding: 5px;
+        font-size: 24pt;
+        font-weight: 600;
+        margin: 0;
+        text-decoration: none;
+    }
+    @mixin tarjeta ($foto) {
+        background-image: $foto;
+        background-repeat: no-repeat;
+        border-width: 2px;
+        border-radius: 10px;
+    }
+    .opcionesIndex__card-sushi {
+        @include tarjeta (url(../img/sushi.jpg))
+    }
+    .opcionesIndex__card-ramen {
+        @include tarjeta (url(../img/ramen.jpg))
+    }
+    .opcionesIndex__card-buns {
+        @include tarjeta (url(../img/buns.jpg))
+    }
+    .opcionesIndex__card-dumplings {
+        @include tarjeta (url(../img/dumpling.jpg))
+    }
+}
+@mixin card-hover {
+    transform: translateY(-10px);
+    text-decoration: none;
+    box-shadow: 15px 15px #e08686;
+}
+.opcionesIndex__card-sushi:hover {
+    @include card-hover;
+}
+.opcionesIndex__card-ramen:hover {
+    @include card-hover;
+}
+.opcionesIndex__card-buns:hover {
+    @include card-hover;
+}
+.opcionesIndex__card-dumplings:hover {
+    @include card-hover;
+}
+.ubicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    .ubicacion__titulo {
+        font: $titulos;
+        height: 50px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        grid-area: titulo;
+        border-radius: 10px;
+    }
+    .ubicacion__sucursales {
+        margin: 50px 0;
+        width: 500px;
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "mapa info";
+        grid-template-columns: 500px;
+        grid-template-rows: 60px  600px;
+        justify-content: center;
+        align-content: center;
+        border-radius: 10px;
+    }
+    .ubicacion__mapa {
+        width: 500px;
+        height: 600px;
+        margin: 0;
+        grid-area: mapa;
+        box-shadow: 15px 15px $rosa-nav;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .ubicacion__locales {
+        background-color: $blanco;
+        width: 500px;
+        height: 600px;
+        margin: 0;
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: 15px 15px $rosa-nav; 
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    
+        .ubicacion__locales__info {
+            font: $titulos;
+            color: $negro;
+            margin: 10px;
+        }
+        .ubicacion__locales__info-texto{
+            font: $textos;
+            color: $negro;
+            margin: 0;
+        }
+    }
+}
+
+    /*Footer*/
+.footer {
+    background-color: $negro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .footer__locales {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0;
+        padding: 5px;
+        width: 1300px;
+    }
+    .footer__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    .footer__infoLocales {
+        font-size: 14pt;
+        color: $rosa-button;
+        margin-left: 50px;
+        text-align: center;
+    }    
+    .footer__datos {
+        list-style: none;
+        font-size: 12pt;
+        font-weight: 100;
+        color: $blanco;
+    }
+}
+@mixin iconos {
+    margin-right: 10px;
+}
+.icofont-google-map {
+    @include iconos;
+}
+.icofont-ui-clock {
+    @include iconos;
+}
+.icofont-phone {
+    @include iconos;
+}
+
+    /*Menu*/
+.menu {
+    margin-bottom: 50px;
+
+    .menu__opciones {
+        display: flex;
+        justify-content: center;
+    }
+    .menu__fondo {
+        background-color: $rosa-claro;
+    }
+    .menu__nombre {
+        font: $textos-destacados;
+        color: $negro;
+        padding-left: 30px;
+        margin-top: 10px;
+        grid-area: ingredientes;
+    }
+    .menu__texto {
+        font: $textos;
+        color: $negro;
+        padding-left: 30px;
+        margin-top: 10px;
+        grid-area: ingredientes;
+    }
+    .menu__titulo {
+        background-color: $rosa-claro;
+        color: $negro;
+        font: $titulos;
+        padding: 20px 0 20px 30px;
+        grid-area: titulo;
+        margin: 0;
+    }
+    @mixin menu {
+        margin: 50px 0 0 50px;
+        display: grid;
+        grid-template-columns: 600px 600px;
+        grid-template-rows: 150px auto;
+        box-shadow: -15px 15px $rosa-button;
+        border-bottom-right-radius: 10px;
+    }
+    .menu__sushi {
+        @include menu;
+        grid-template-areas: 
+        "titulo fotoSushi"
+        "ingredientes fotoSushi";
+    }
+    .menu__ramen {
+        @include menu;
+        grid-template-areas: 
+        "fotoRamen titulo"
+        "fotoRamen ingredientes";
+    }
+    .menu__buns {
+        @include menu;
+        grid-template-areas: 
+        "titulo fotoBun"
+        "ingredientes fotoBun";
+    }
+    .menu__dumpling {
+        @include menu;
+        grid-template-areas: 
+        "fotoDumpling titulo"
+        "fotoDumpling ingredientes";
+    }
+}
+.veggie { 
+    color: #389E38;
+}
+.sushi__foto {
+    margin: 0;
+    grid-area: fotoSushi;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.ramen__foto {
+    margin: 0;
+    grid-area: fotoRamen;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.buns__foto {
+    margin: 0;
+    grid-area: fotoBun;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.dumpling__foto {
+    margin: 0;
+    grid-area: fotoDumpling;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+    /*Locales*/
+.sucursales {
+    background-color: $rosa-light;
+    margin: 75px 0 10px 0; 
+    display: flex;
+    justify-content: center;
+
+    .sucursales__nuestroslocales {
+        background-color: $rosa-claro;
+        width: 400px;
+        height: 200px;
+        grid-area: nuestros-locales;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 20px;
+    }
+    .sucursales__locales {
+        margin: 25px 50px 50px 50px;
+        padding: 0;
+        display: grid;
+        grid-template-areas:
+        "nuestros-locales"
+        "fotoLanus";
+        grid-template-rows: 200px;
+        box-shadow: 15px 15px $rosa-nav;
+        transition: all 0.25s;
+        border-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    
+        .sucursales__locales__barrios {
+            font-size: 24pt;
+            font-weight: 900;
+            color:  $negro;
+            margin-top: 20px;
+        }
+        .sucursales__locales__info {
+            font-size: 14pt;
+            font-weight: 400;
+            margin: 0;
+        
+            @mixin info-locales ($sucursal){
+                grid-area: $sucursal;
+                margin: 0;
+            }
+            .sucursales__locales__info-lanus {
+                @include info-locales(fotoLanus)
+            }
+            .sucursales__locales__info-lomas {
+                @include info-locales(fotoLomas)
+            }
+            .sucursales__locales__info-lomas {
+                @include info-locales(fotoAdrogue)
+            }
+        }
+        .sucursales__img {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    .sucursales__locales:hover {
+        transform: translateY(-15px);
+        box-shadow: 15px 15px #e08686; 
+    }
+}
+
+    /*FAQ*/
+.faq {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .faq__grilla {
+        margin: 25px 0 50px 0;
+        display: grid;
+        grid-template-areas: 
+        "formulario preg-resp";
+        grid-template-rows: 700px;
+        grid-template-columns: 600px;
+        box-shadow: 15px 15px $rosa-nav;
+        border-radius: 10px; 
+    }
+    .faq__form {
+        background-color: $rosa-pages; 
+        display: flex;
+        justify-content: center;
+        grid-area: formulario;
+    }
+    .faq__preguntas {
+        background-color: #fbdada;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        grid-area: preg-resp;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .faq__pregRta {
+        margin: 0;
+        display: flex;
+        flex-direction: column; 
+    }
+    .faq__container {
+        height: 700px;
+        background-color: $rosa-claro;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .faq__titulo {
+        font: $titulos;
+        color:  $negro;
+        margin: 0;
+        background-color: $rosa-claro;
+        width: 600px;
+        height: auto;
+        grid-area: pregunta;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius: 10px;
+    }
+    @mixin textos ($puntos, $peso){
+        font-size: $puntos;
+        font-weight: $peso;
+        color:  $negro;
+        margin: 0;
+        padding-top: 20px;
+        background-color: $rosa-claro;
+        width: 600px;
+        height: auto;
+        grid-area: pregunta;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .faq__texto-preguntas {
+        @include textos (16pt, 700);
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .faq__texto-respuestas {
+        @include textos (14pt, 500);
+    }
+
+    .formulario {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .form__completar {
+        width: 600px;
+        height: 700px;
+        background-color:  $negro;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .form__titulo {
+        font: $titulos;
+        color: $blanco;
+        margin: 0;
+        background-color: $negro;
+        width: 600px;
+        height: 80px;
+        grid-area: pregunta;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 10px;
+    }
+    .form__label {
+        margin-left: 30px;
+        color: $blanco;
+    }
+    @mixin input ($ancho) {
+        font-size: 18pt;
+        margin: 5px 30px 5px 5px;
+        width: $ancho;
+        border-radius: 2px;
+    }
+    .form__input {
+        @include input(472px)
+    } 
+    .form__input-mail {
+        @include input(492px)
+    }
+    .form__input-textArea {
+        font-size: 14pt;
+        margin: 10px 30px;
+        width: 540px;
+    }
+    .form__cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .form__button-faq {
+        background-color:$rosa-button;
+        color:$blanco;
+        font-size: 16pt;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 5px;
+        margin: 15px;
+        border: 2px solid $blanco;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+}
+
+    /*Pedido*/
+.pedido {
+    background-color:$blanco;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+
+    .pedido__formulario {
+        background-color: $rosa-claro;
+        margin: 20px 0 50px 0;
+        display: grid;
+        grid-template-areas:
+        "formulario-pedido";
+        grid-template-rows: 1200px;
+        grid-template-columns: 700px;
+        box-shadow: 15px 15px $rosa-nav;
+        border-radius: 10px;
+    }
+    .pedido__container {
+        background-image: #fdecec;
+        margin: 20px 0;
+        display: inline-block;
+    }
+    .pedido__titulo {
+        font: $titulos;
+        color: $negro;
+        margin: 0;
+        background-color: $rosa-claro;
+        width: 100%;
+        height: auto;
+        grid-area: pregunta;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .pedido__subtitulo {
+        font: $textos-destacados;
+        color: $rosa-button;
+        margin: 20px 30px;
+        grid-area: formulario-pedido;
+    }
+    .pedido__datos {
+        font: $textos-destacados;
+        margin-left: 30px;
+        color: $negro;
+        grid-area: formulario-pedido;
+    }
+    .pedido__input-name {
+        font-size: 18pt;
+        margin: 5px 30px;
+        width: 640px;
+    }
+    .pedido__input-ad {
+        font-size: 16pt;
+        margin: 5px 30px;
+        width: 640px;
+    }
+    .pedido__input-ph {
+        font-size: 16pt;
+        margin: 5px 30px;
+        width: 640px;
+    }
+    .pedido__input-mail {
+        font-size: 16pt;
+        margin: 5px 30px;
+        width: 640px;
+    }
+    .pedido__productos {
+        width: 100px;
+        font-size: 16px;
+    }
+    .pedido__input-cant {
+        font-size: 16pt;
+        margin: 5px;
+        width: 40px;
+    }
+    .form__input-textArea1 {
+        width: 640px;
+        margin: 30px;
+    }
+    .pedido__pago {
+        font: $textos-destacados;
+        display: inline-block;
+        margin: 5px 5px 10px 30px;
+        padding: 0;
+        grid-area: formulario;
+    }
+    .pedido__input-cash {
+        margin: 5px 50px 0 0;
+    }
+    .pedido__nl {
+        font: $textos;
+        margin: 0;
+    }
+    .pedido__cbx {
+        margin-top: 15px;
+    }
+    .form__cta-pedido {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .form__button-pedido {
+        background-color:$rosa-button;
+        color:$blanco;
+        font-size: 14pt;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 5px;
+        margin: 15px;
+        border: 2px solid $negro;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+}
+
+    /*Pantallas*/
+@media (max-width: 576px){
+
+    body {
+        margin-top: 75px;
+        background-color: $blanco;
+        width: 100%;
+    }
+    /*index*/
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        height: 80px;
+
+        .nav__logo {
+            width: 85%;
+            height: 80%;
+        }
+        .nav__img {
+            margin-right: 10px;
+            width: 70%;
+            height: 70%;
+        }
+        .nav__menu{
+            background-color: $rosa-nav;
+            height: 1px;
+            position: relative;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            margin-top: -110%;
+            transition: all 500ms ease;
+    
+            .nav__menu-list {
+                background-color: $rosa-nav;
+                flex-direction: column;
+                border-top: 1px solid $blanco;
+                width: 100%;
+                margin-top: 0;
+                font-size: 12pt;
+                height: 150px;
+                padding-left: 15px;
+            }
+        }
+        .nav__redes {
+            display: none;
+        }
+        .nav__icon {
+            display: block;
+            margin: 0;
+        }
+        #nav__btn:checked ~ .nav__menu{ 
+            margin: 0;
+        }
+        .nav__button-menu {
+            font-size: 14pt;
+            margin: 0;
+        }
+    }
+    .nav__button {
+        display: flex;
+    }
+    .bodyIndex {
+        background-color: $blanco;
+        width: 100%;
+        height: auto;
+    }
+    .banner, .banner__cta, .banner__button {
+        display: none;
+    }
+    .opcionesIndex{
+        max-width: 100%;
+        height: 1500px;
+        padding: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: $rosa-light;
+    } 
+    .d-block {
+        width: auto;
+        height: 250px;
+    }
+    .ubicacion {
+        display: none;
+    }
+    .footer {
+        width: auto;
+
+        .footer__locales {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 12pt;
+            margin: 0;
+        }
+        .footer__infoLocales {
+            font-size: 14pt;
+            margin: 0;
+        }
+        .footer__datos {
+            font-size: 12pt;
+            margin: 0;
+        }
+        .footer__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 10pt;
+            margin: 0;
+        }
+    }
+        
+    /*Menú*/
+    .menu {
+        margin-bottom: 50px;
+    
+        .menu__opciones {
+            display: flex;
+            justify-content: center;
+        }
+        .menu__fondo {
+            background-color: $rosa-claro;
+        }
+        .menu__nombre {
+            font-size: 16pt;
+            color: $negro;
+            padding-left: 30px;
+            margin-top: 10px;
+            grid-area: ingredientes;
+            border-radius: 10px;
+        }
+        .menu__texto {
+            font-size: 12pt;
+            color: $negro;
+            padding-left: 30px;
+            margin-top: 10px;
+            grid-area: ingredientes;
+            border-radius: 10px;
+        }
+        .menu__titulo {
+            background-color: $rosa-claro;
+            color: $negro;
+            font-size: 20pt;
+            padding: 20px 0 20px 30px;
+            grid-area: titulo;
+            margin: 0;
+            border-radius: 10px;
+        }
+        @mixin menu {
+            margin: 30px;
+            display: grid;
+            grid-template-columns: 300px;
+            grid-template-rows: auto;
+            box-shadow: -15px 15px $rosa-button;
+        }
+        .menu__sushi {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+        .menu__ramen {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+        .menu__buns {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+        .menu__dumpling {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+    }
+    .veggie { 
+        color: #389E38;
+    }
+    .sushi__foto {
+        display: none;
+    }
+    .ramen__foto {
+        display: none;
+    }
+    .buns__foto {
+        display: none;
+    }
+    .dumpling__foto {
+        display: none;
+    }
+
+    /*Locales*/
+    .sucursales {
+        background-color: $blanco;
+        margin: 80px 0 10px 0; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    
+        .sucursales__nuestroslocales {
+            background-color: $rosa-claro;
+            width: auto;
+            height: 150px;
+            grid-area: nuestros-locales;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 20px;
+        }
+        .sucursales__locales {
+            margin: 30px;
+            padding: 0;
+            display: grid;
+            grid-template-areas:
+            "nuestros-locales"
+            "fotoLanus";
+            grid-template-rows: 150px auto;
+            box-shadow: 15px 15px $rosa-nav;
+            transition: all 0.25s;
+            border-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        
+            .sucursales__locales__barrios {
+                font-size: 16pt;
+                font-weight: 900;
+                color:  $negro;
+                margin-top: 5px;
+            }
+            .sucursales__locales__info {
+                font-size: 12pt;
+                font-weight: 400;
+                margin: 0;
+            
+                @mixin info-locales ($sucursal){
+                    grid-area: $sucursal;
+                    margin: 0;
+                }
+                .sucursales__locales__info-lanus {
+                    @include info-locales(fotoLanus)
+                }
+                .sucursales__locales__info-lomas {
+                    @include info-locales(fotoLomas)
+                }
+                .sucursales__locales__info-lomas {
+                    @include info-locales(fotoAdrogue)
+                }
+            }
+            .sucursales__img {
+                width: 100%;
+                height: 100%;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+        .sucursales__locales:hover {
+            transform: translateY(-15px);
+            box-shadow: 15px 15px #e08686; 
+        }
+    }
+
+    /*faq*/
+    .faq {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .faq__grilla {
+            margin: 25px;
+            display: grid;
+            grid-template-areas: 
+            "preg-resp preg-resp" 
+            "formulario formulario";
+            grid-template-rows: auto;
+            grid-template-columns: 360px;
+            box-shadow: 15px 15px $rosa-nav; 
+        }
+        .faq__form {
+            background-color: $rosa-pages; 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            grid-area: formulario;
+            width: 360px;
+        }
+        .faq__preguntas {
+            background-color: #fbdada;
+            margin: 0;
+            grid-area: preg-resp;
+            width: 360px;
+        }
+        .faq__pregRta {
+            margin: 0;
+            width: 360px;
+            height: auto;
+        }
+        .faq__container {
+            height: auto;
+            background-color: $rosa-claro;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .faq__titulo {
+            font-size: 18pt;
+            color:  $negro;
+            margin: 0;
+            background-color: $rosa-claro;
+            width: 360px;
+            height: auto;
+            grid-area: pregunta;
+        }
+        @mixin textos ($puntos, $peso){
+            font-size: $puntos;
+            font-weight: $peso;
+            color:  $negro;
+            margin: 0;
+            padding: 5px;
+            background-color: $rosa-claro;
+            width: 360px;
+            height: auto;
+            grid-area: pregunta;
+            text-align: center;
+        }
+        .faq__texto-preguntas {
+            @include textos (12pt, 500);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .faq__texto-respuestas {
+            @include textos (10pt, 400);
+        }
+
+        .formulario {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .form__completar {
+            width: 360px;
+            height: 550px;
+            background-color:  $negro;
+            border-top-left-radius: 10px;
+        }
+        .form__titulo {
+            font: $titulos;
+            color: $blanco;
+            margin: 0;
+            background-color: $negro;
+            width: 360px;
+            height: 80px;
+            grid-area: pregunta;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form__label {
+            margin: 0 0 0 30px;
+            color: $blanco;
+        }
+        @mixin input ($ancho) {
+            font-size: 16pt;
+            margin: 10px 30px;
+            width: $ancho;
+            border-radius: 2px;
+        }
+        .form__input {
+            @include input(295px)
+        } 
+        .form__input-mail {
+            @include input(295px)
+        }
+        .form__input-textArea {
+            font-size: 18pt;
+            margin: 10px 30px;
+            width: 295px;
+            height: 200px;
+        }
+        .form__cta {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .form__button-faq {
+            background-color:$rosa-button;
+            color:$blanco;
+            font-size: 12pt;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 5px;
+            margin: 15px;
+            border: 2px solid $blanco;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+    }
+    
+    /*Pedido*/
+    .pedido {
+        background-color:$blanco;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+
+        .pedido__formulario {
+            background-color: $rosa-claro;
+            margin: 20px 0 50px 0;
+            display: grid;
+            grid-template-areas:
+            "formulario-pedido";
+            grid-template-rows: 1120px;
+            grid-template-columns: 350px;
+            box-shadow: 15px 15px $rosa-nav;
+            border-radius: 10px;
+        }
+        .pedido__container {
+            background-image: #fdecec;
+            margin: 20px 0;
+            display: inline-block;
+        }
+        .pedido__titulo {
+            font-size: 20pt;
+            color: $negro;
+            margin: 0;
+            background-color: $rosa-claro;
+            width: 100%;
+            height: auto;
+            grid-area: pregunta;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .pedido__subtitulo {
+            font-size: 18pt;
+            color: $rosa-button;
+            margin: 20px 30px;
+            grid-area: formulario-pedido;
+            text-align: center;
+        }
+        .pedido__datos {
+            font-size: 12pt;
+            margin: 0 0 0 30px;
+            color: $negro;
+            grid-area: formulario-pedido;
+        }
+        .pedido__input-name {
+            font-size: 16pt;
+            margin: 5px 30px;
+            width: 290px;
+        }
+        .pedido__input-ad {
+            font-size: 16pt;
+            margin: 5px 30px;
+            width: 290px;
+        }
+        .pedido__input-ph {
+            font-size: 16pt;
+            margin: 5px 30px;
+            width: 290px;
+        }
+        .pedido__input-mail {
+            font-size: 16pt;
+            margin: 5px 30px;
+            width: 290px;
+        }
+        .pedido__productos {
+            width: 100px;
+            font-size: 14pt;
+        }
+        .pedido__input-cant {
+            font-size: 16pt;
+            margin: 5px;
+            width: 30px;
+        }
+        .form__input-textArea1 {
+            width: 290px;
+            margin: 10px 30px;
+        }
+        .pedido__pago {
+            font-size: 12pt;
+            display: inline-block;
+            margin: 5px 5px 10px 30px;
+            padding: 0;
+            grid-area: formulario;
+        }
+        .pedido__input-cash {
+            margin: 5px 30px 0 0;
+        }
+        .pedido__nl {
+            font: $textos;
+            margin: 0;
+        }
+        .pedido__cbx {
+            margin-top: 15px;
+        }
+        .form__cta-pedido {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .form__button-pedido {
+            background-color:$rosa-button;
+            color:$blanco;
+            font-size: 12pt;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 5px;
+            margin: 5px 30px;
+            border: 2px solid $negro;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+    }
+}    
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 75px;
+
+        .nav__logo {
+            display: inline-block;
+            justify-content: flex-start;
+            width: 15%;
+        }
+        .nav__img {
+            height: 40px;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: flex-start;
+            align-items: flex-start;
+            width: auto;
+        }
+        .nav__menu-list {
+            width: 300px;
+            display: inline-block;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .nav__button-menu {
+            font-size: 16pt;
+            letter-spacing: 3px;
+            font-weight: 900;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            padding: 0;
+        }
+        .nav__redes, .nav__redes-list, .nav__button-redes {
+            display: none;
+        }
+    }
+    .banner {
+        display: none;
+    }
+    .banner__button {
+        display: none;
+    }
+    .banner__cta {
+        display: none;
+    }
+    .opcionesIndex{
+        max-width: 100%;
+        height: 1400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $rosa-light;
+
+        .opcionesIndex__card {
+            height: 300px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            font-size: 12pt;
+            margin: 10px 0;
+        }
+        .opcionesIndex__button {
+            font-size: 16pt;
+        }
+
+    } 
+    .ubicacion {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        height: 600px;
+        .ubicacion__titulo {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            font-size: 20pt;
+            height: 40px;
+            grid-area: titulo;
+        }
+        .ubicacion__mapa {
+            display: none;
+        }
+        .ubicacion__sucursales{
+            margin: 10px;
+            display: grid;
+            grid-template-areas: 
+            "titulo"
+            "info";
+            grid-template-columns: 500px;
+            grid-template-rows: 60px  600px;
+        }
+        .ubicacion__locales {
+            display: flex;
+            flex-direction: column;
+            grid-area: info;
+            height: 450px;
+            .ubicacion__locales__info {
+                font-size: 18pt;
+            }
+            .ubicacion__locales__info-texto {
+                font-size: 14pt;
+            }
+        }
+    }
+    .footer {
+        width: auto;
+    }
+    .footer__locales, .footer__infoLocales {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .datos-en-footer {
+        font-size: 0.8em;
+    }
+
+    /*Menu*/
+    .menu {
+        margin-bottom: 50px;
+    
+        .menu__opciones {
+            display: flex;
+            justify-content: center;
+        }
+        .menu__fondo {
+            background-color: $rosa-claro;
+        }
+        .menu__nombre {
+            font-size: 18pt;
+            color: $negro;
+            padding-left: 30px;
+            margin-top: 10px;
+            grid-area: ingredientes;
+            border-radius: 10px;
+        }
+        .menu__texto {
+            font-size: 14pt;
+            color: $negro;
+            padding-left: 30px;
+            margin-top: 10px;
+            grid-area: ingredientes;
+            border-radius: 10px;
+        }
+        .menu__titulo {
+            background-color: $rosa-claro;
+            color: $negro;
+            font-size: 24pt;
+            padding: 20px 0 20px 30px;
+            grid-area: titulo;
+            margin: 0;
+            border-radius: 10px;
+        }
+        @mixin menu {
+            margin: 30px;
+            display: grid;
+            grid-template-columns: 600px;
+            grid-template-rows: auto;
+            box-shadow: -15px 15px $rosa-button;
+        }
+        .menu__sushi {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+        .menu__ramen {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+        .menu__buns {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+        .menu__dumpling {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+    }
+    .veggie { 
+        color: #389E38;
+    }
+    .sushi__foto {
+        display: none;
+    }
+    .ramen__foto {
+        display: none;
+    }
+    .buns__foto {
+        display: none;
+    }
+    .dumpling__foto {
+        display: none;
+    }
+
+    /*Locales*/
+    .sucursales {
+        background-color: $blanco;
+        margin: 80px 0 10px 0; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .sucursales__nuestroslocales {
+            background-color: $rosa-claro;
+            width: auto;
+            height: 150px;
+            grid-area: nuestros-locales;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+        .sucursales__locales {
+            width: 400px;
+            margin: 30px;
+            padding: 0;
+            display: grid;
+            grid-template-areas:
+            "nuestros-locales"
+            "fotoLanus";
+            grid-template-rows: 150px auto;
+            box-shadow: 15px 15px $rosa-nav;
+            transition: all 0.25s;
+            border-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        
+            .sucursales__locales__barrios {
+                font-size: 18pt;
+                font-weight: 900;
+                color:  $negro;
+                margin-top: 5px;
+            }
+            .sucursales__locales__info {
+                font-size: 14pt;
+                font-weight: 400;
+                margin: 0;
+            
+                @mixin info-locales ($sucursal){
+                    grid-area: $sucursal;
+                    margin: 0;
+                }
+                .sucursales__locales__info-lanus {
+                    @include info-locales(fotoLanus)
+                }
+                .sucursales__locales__info-lomas {
+                    @include info-locales(fotoLomas)
+                }
+                .sucursales__locales__info-lomas {
+                    @include info-locales(fotoAdrogue)
+                }
+            }
+            .sucursales__img {
+                width: auto;
+                height: auto;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+        .sucursales__locales:hover {
+            display: none;
+        }
+    }
+
+    /*faq*/
+    .faq {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $blanco;
+
+        .faq__grilla {
+            margin: 25px;
+            display: grid;
+            grid-template-areas: 
+            "preg-resp preg-resp" 
+            "formulario formulario";
+            grid-template-rows: auto;
+            grid-template-columns: 360px;
+            box-shadow: 15px 15px $rosa-nav; 
+        }
+        .faq__form {
+            background-color: $rosa-pages; 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            grid-area: formulario;
+            width: 360px;
+        }
+        .faq__preguntas {
+            background-color: #fbdada;
+            margin: 0;
+            grid-area: preg-resp;
+            width: 360px;
+        }
+        .faq__pregRta {
+            margin: 0;
+            width: 360px;
+            height: auto;
+        }
+        .faq__container {
+            height: auto;
+            background-color: $rosa-claro;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .faq__titulo {
+            font-size: 18pt;
+            color:  $negro;
+            margin: 0;
+            background-color: $rosa-claro;
+            width: 360px;
+            height: auto;
+            grid-area: pregunta;
+        }
+        @mixin textos ($puntos, $peso){
+            font-size: $puntos;
+            font-weight: $peso;
+            color:  $negro;
+            margin: 0;
+            padding: 5px;
+            background-color: $rosa-claro;
+            width: 360px;
+            height: auto;
+            grid-area: pregunta;
+            text-align: center;
+        }
+        .faq__texto-preguntas {
+            @include textos (12pt, 500);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .faq__texto-respuestas {
+            @include textos (10pt, 400);
+        }
+
+        .formulario {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .form__completar {
+            width: 360px;
+            height: 550px;
+            background-color:  $negro;
+            border-top-left-radius: 10px;
+        }
+        .form__titulo {
+            font: $titulos;
+            color: $blanco;
+            margin: 0;
+            background-color: $negro;
+            width: 360px;
+            height: 80px;
+            grid-area: pregunta;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form__label {
+            margin: 0 0 0 30px;
+            color: $blanco;
+        }
+        @mixin input ($ancho) {
+            font-size: 14px;
+            margin: 10px 30px;
+            width: $ancho;
+            border-radius: 2px;
+        }
+        .form__input {
+            @include input(295px)
+        } 
+        .form__input-mail {
+            @include input(295px)
+        }
+        .form__input-textArea {
+            font-size: 16px;
+            margin: 10px 30px;
+            width: 295px;
+            height: 200px;
+        }
+        .form__cta {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .form__button-faq {
+            background-color:$rosa-button;
+            color:$blanco;
+            font-size: 12pt;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 5px;
+            margin: 15px;
+            border: 2px solid $blanco;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+    }        
+}
+@media screen and (min-width: 768px) and (max-width: 922px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 75px;
+
+        .nav__logo {
+            display: flex;
+            flex-direction: row;
+            width: 50px;
+        }
+        .nav__img {
+            height: 50px;
+            width: auto;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+        }
+        .nav__menu {
+            font-size: 12pt;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            width: 70%;
+            .nav__menu-list {
+                height: auto;
+                padding: 0;
+                font-size: 12pt;
+            }
+        }
+        .nav__button-menu {
+            letter-spacing: 3px;
+            font-weight: 900;
+            display: inline-block;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .nav__redes, .nav__redes-list, .nav__button-redes {
+            display: none;
+        }
+    }
+
+    /*Index*/
+    .banner {
+        height: 380px;
+    }
+    .banner__cta {
+        position: absolute;
+        margin-top: 0;
+        left: 35%;
+        top: 50%;
+    }
+    .banner__button {
+        color: $blanco;
+        background-color: #e08686;
+        border-color: $blanco;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        height: 10px;
+        width: 80px;
+        padding: 5px 20px;
+        font-size: 18pt;
+        margin: 30px 0;
+        font-weight: 700;
+    }
+    .opcionesIndex{
+        background-color: #fdecec;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+        height: 400px;
+        width: auto;
+
+        .opcionesIndex__card {
+            height: 300px;
+            width: 80%;
+            display: inline-flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: flex-end;
+            align-content: flex-end;
+            margin: 15px;
+            font-size: 18pt;   
+        }
+    }
+    .ubicacion {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        height: 600px;
+        .ubicacion__titulo {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            font-size: 20pt;
+            height: 40px;
+            grid-area: titulo;
+        }
+        .ubicacion__mapa {
+            display: none;
+        }
+        .ubicacion__sucursales{
+            margin: 10px;
+            display: grid;
+            grid-template-areas: 
+            "titulo"
+            "info";
+            grid-template-columns: 500px;
+            grid-template-rows: 60px  600px;
+        }
+        .ubicacion__locales {
+            display: flex;
+            flex-direction: column;
+            grid-area: info;
+            height: 450px;
+            .ubicacion__locales__info {
+                font-size: 18pt;
+            }
+            .ubicacion__locales__info-texto {
+                font-size: 14pt;
+            }
+        }
+    }
+    .footer {
+        width: auto;
+    }
+    .footer__locales, .footer__infoLocales {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14pt;
+    }
+    .footer__datos {
+        font-size: 0.8em;
+    }
+
+    /*Menu*/
+    .menu {
+        margin-bottom: 50px;
+    
+        .menu__opciones {
+            display: flex;
+            justify-content: center;
+        }
+        .menu__fondo {
+            background-color: $rosa-claro;
+        }
+        .menu__nombre {
+            font-size: 18pt;
+            color: $negro;
+            padding-left: 30px;
+            margin-top: 10px;
+            grid-area: ingredientes;
+            border-radius: 10px;
+        }
+        .menu__texto {
+            font-size: 14pt;
+            color: $negro;
+            padding-left: 30px;
+            margin-top: 10px;
+            grid-area: ingredientes;
+            border-radius: 10px;
+        }
+        .menu__titulo {
+            background-color: $rosa-claro;
+            color: $negro;
+            font-size: 24pt;
+            padding: 20px 0 20px 30px;
+            grid-area: titulo;
+            margin: 0;
+            border-radius: 10px;
+        }
+        @mixin menu {
+            margin: 30px;
+            display: grid;
+            grid-template-columns: 600px;
+            grid-template-rows: auto;
+            box-shadow: -15px 15px $rosa-button;
+        }
+        .menu__sushi {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+        .menu__ramen {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+        .menu__buns {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+        .menu__dumpling {
+            @include menu;
+            grid-template-areas: 
+            "titulo titulo"
+            "ingredientes ingredientes";
+            border-radius: 10px;
+        }
+    }
+    .veggie { 
+        color: #389E38;
+    }
+    .sushi__foto {
+        display: none;
+    }
+    .ramen__foto {
+        display: none;
+    }
+    .buns__foto {
+        display: none;
+    }
+    .dumpling__foto {
+        display: none;
+    }
+
+    /*Locales*/
+    .sucursales {
+        background-color: $blanco;
+        margin: 80px 0 10px 0; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .sucursales__nuestroslocales {
+            background-color: $rosa-claro;
+            width: auto;
+            height: 150px;
+            grid-area: nuestros-locales;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+        .sucursales__locales {
+            width: 400px;
+            margin: 30px;
+            padding: 0;
+            display: grid;
+            grid-template-areas:
+            "nuestros-locales"
+            "fotoLanus";
+            grid-template-rows: 150px auto;
+            box-shadow: 15px 15px $rosa-nav;
+            transition: all 0.25s;
+            border-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        
+            .sucursales__locales__barrios {
+                font-size: 18pt;
+                font-weight: 900;
+                color:  $negro;
+                margin-top: 5px;
+            }
+            .sucursales__locales__info {
+                font-size: 14pt;
+                font-weight: 400;
+                margin: 0;
+            
+                @mixin info-locales ($sucursal){
+                    grid-area: $sucursal;
+                    margin: 0;
+                }
+                .sucursales__locales__info-lanus {
+                    @include info-locales(fotoLanus)
+                }
+                .sucursales__locales__info-lomas {
+                    @include info-locales(fotoLomas)
+                }
+                .sucursales__locales__info-lomas {
+                    @include info-locales(fotoAdrogue)
+                }
+            }
+            .sucursales__img {
+                width: auto;
+                height: auto;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+        .sucursales__locales:hover {
+            display: none;
+        }
+    }
+
+    /*faq*/
+    .faq {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $blanco;
+
+        .faq__grilla {
+            margin: 25px;
+            display: grid;
+            grid-template-areas: 
+            "preg-resp preg-resp" 
+            "formulario formulario";
+            grid-template-rows: auto;
+            grid-template-columns: 700px;
+            box-shadow: 15px 15px $rosa-nav; 
+        }
+        .faq__form {
+            background-color: $rosa-pages; 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            grid-area: formulario;
+            width: 700px;
+        }
+        .faq__preguntas {
+            background-color: #fbdada;
+            margin: 0;
+            grid-area: preg-resp;
+            width: 700px;
+        }
+        .faq__pregRta {
+            margin: 0;
+            width: 700px;
+            height: auto;
+        }
+        .faq__container {
+            height: auto;
+            background-color: $rosa-claro;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .faq__titulo {
+            font-size: 24pt;
+            color:  $negro;
+            margin: 0;
+            background-color: $rosa-claro;
+            width: 700px;
+            height: auto;
+            grid-area: pregunta;
+        }
+        @mixin textos ($puntos, $peso){
+            font-size: $puntos;
+            font-weight: $peso;
+            color:  $negro;
+            margin: 0;
+            padding: 5px;
+            background-color: $rosa-claro;
+            width: 700px;
+            height: auto;
+            grid-area: pregunta;
+            text-align: center;
+        }
+        .faq__texto-preguntas {
+            @include textos (18pt, 600);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .faq__texto-respuestas {
+            @include textos (16pt, 400);
+        }
+        .formulario {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .form__completar {
+            width: 700px;
+            height: 700px;
+            background-color:  $negro;
+            border-top-left-radius: 10px;
+        }
+        .form__titulo {
+            font: $titulos;
+            color: $blanco;
+            margin: 0;
+            background-color: $negro;
+            width: 700px;
+            height: 80px;
+            grid-area: pregunta;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form__label {
+            margin: 0 0 0 30px;
+            color: $blanco;
+            font-size: 16pt;
+        }
+        @mixin input ($ancho) {
+            font-size: 16pt;
+            margin: 5px 30px;
+            width: $ancho;
+            border-radius: 2px;
+        }
+        .form__input {
+            @include input(635px)
+        } 
+        .form__input-mail {
+            @include input(635px)
+        }
+        .form__input-textArea {
+            font-size: 18pt;
+            margin: 10px 30px;
+            width: 635px;
+            height: 230px;
+        }
+        .form__cta {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .form__button-faq {
+            background-color:$rosa-button;
+            color:$blanco;
+            font-size: 16pt;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 5px;
+            margin: 15px;
+            border: 2px solid $blanco;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+    }
+
+
+}
+@media screen and (min-width: 922px) and (max-width: 1200px){
+    .nav{
+        background-color:  #edb2b4;
+        height: 75px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+
+        .nav__logo {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+        }
+        .nav__img {
+            height: 50px;
+            width: auto;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+            align-items: center;
+        }
+        .nav__menu {
+            font-size: 13px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            width: 60%;
+            .nav__menu-list {
+                height: auto;
+                padding: 0;
+                font-size: 14px;
+            }
+        }
+        .nav__button-menu {
+            letter-spacing: 3px;
+            font-weight: 900;
+            display: inline-block;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .nav__redes {
+            margin: 0;
+            width: 20%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .nav__redes-list {
+                height: auto;
+                padding: 0;
+                font-size: 14px;
+            }
+        }
+        .nav__button-redes {
+            font-size: 20pt;
+            letter-spacing: 3px;
+            font-weight: 900;
+            display: inline-block;
+            margin: 0;
+        }
+    }
+    .banner__cta {
+        display: none;
+    }
+    .banner__button {
+        display: none;
+    }
+    .opcionesIndex{
+        background-color: #fdecec;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+        height: 400px;
+        width: auto;
+    }
+    .opcionesIndex__card {
+        height: auto;
+        width: auto;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
+        margin: 15px;
+        font-size: 18pt;
+    }
+    .opcionesIndex__card-sushi {
+        background-image: url(../img/sushi922.jpg);
+        background-repeat: no-repeat;
+
+    }
+    .opcionesIndex__card-ramen {
+        background-image: url(../img/ramen922.jpg);
+        background-repeat: no-repeat;   
+    }
+    .opcionesIndex__card-buns {
+        background-image: url(../img/bun922.jpg);
+        background-repeat: no-repeat; 
+    }
+    .opcionesIndex__card-dumplings {
+        background-image: url(../img/dumpling922.jpg);
+        background-repeat: no-repeat;    
+    }
+    .ubicacion {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        height: 600px;
+        .ubicacion__titulo {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            font-size: 20pt;
+            height: 40px;
+            grid-area: titulo;
+        }
+        .ubicacion__mapa {
+            display: none;
+        }
+        .ubicacion__sucursales{
+            margin: 10px;
+            display: grid;
+            grid-template-areas: 
+            "titulo"
+            "info";
+            grid-template-columns: 500px;
+            grid-template-rows: 60px  600px;
+        }
+        .ubicacion__locales {
+            display: flex;
+            flex-direction: column;
+            grid-area: info;
+            height: 450px;
+            .ubicacion__locales__info {
+                font-size: 18pt;
+            }
+            .ubicacion__locales__info-texto {
+                font-size: 14pt;
+            }
+        }
+    }
+
+    /*Menu*/
+    .menu {
+        margin-bottom: 50px;
+        background-color: $blanco;
+
+        .menu__opciones {
+            display: flex;
+            justify-content: center;
+        }
+        .menu__fondo {
+            background-color: $rosa-claro;
+        }
+        .menu__nombre {
+            font: $textos-destacados;
+            color: $negro;
+            padding-left: 30px;
+            margin-top: 10px;
+            grid-area: ingredientes;
+        }
+        .menu__texto {
+            font-size: 14pt;
+            color: $negro;
+            padding-left: 30px;
+            margin-top: 10px;
+            grid-area: ingredientes;
+        }
+        .menu__titulo {
+            background-color: $rosa-claro;
+            color: $negro;
+            font: $titulos;
+            padding: 20px 0 20px 30px;
+            grid-area: titulo;
+            margin: 0;
+        }
+        @mixin menu {
+            margin: 50px 0 0 50px;
+            display: grid;
+            grid-template-columns: 500px 500px;
+            grid-template-rows: 100px auto;
+            box-shadow: -15px 15px $rosa-button;
+            border-bottom-right-radius: 10px;
+        }
+        .menu__sushi {
+            @include menu;
+            grid-template-areas: 
+            "titulo fotoSushi"
+            "ingredientes fotoSushi";
+        }
+        .menu__ramen {
+            @include menu;
+            grid-template-areas: 
+            "fotoRamen titulo"
+            "fotoRamen ingredientes";
+        }
+        .menu__buns {
+            @include menu;
+            grid-template-areas: 
+            "titulo fotoBun"
+            "ingredientes fotoBun";
+        }
+        .menu__dumpling {
+            @include menu;
+            grid-template-areas: 
+            "fotoDumpling titulo"
+            "fotoDumpling ingredientes";
+        }
+    }
+    .veggie { 
+        color: #389E38;
+    }
+    .sushi__foto {
+        margin: 0;
+        grid-area: fotoSushi;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 500px;
+        height: auto;
+    }
+    .ramen__foto {
+        margin: 0;
+        grid-area: fotoRamen;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 500px;
+        height: auto;
+    }
+    .buns__foto {
+        margin: 0;
+        grid-area: fotoBun;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 500px;
+        height: auto;
+    }
+    .dumpling__foto {
+        margin: 0;
+        grid-area: fotoDumpling;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 500px;
+        height: auto;
+    }
+
+    /*Locales*/
+    .sucursales {
+        background-color: $rosa-light;
+        margin: 75px 0 150px 0; 
+        display: flex;
+        justify-content: center;
+
+        .sucursales__nuestroslocales {
+            background-color: $rosa-claro;
+            width: 350px;
+            height: 200px;
+            grid-area: nuestros-locales;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 20px;
+        }
+        .sucursales__locales {
+            margin: 30px 15px;
+            padding: 0;
+            display: grid;
+            grid-template-areas:
+            "nuestros-locales"
+            "fotoLanus";
+            grid-template-rows: auto;
+            grid-template-columns: 350px;
+            box-shadow: 15px 15px $rosa-nav;
+            transition: all 0.25s;
+            border-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        
+            .sucursales__locales__barrios {
+                font-size: 20pt;
+                font-weight: 900;
+                color:  $negro;
+                margin-top: 20px;
+            }
+            .sucursales__locales__info {
+                font-size: 14pt;
+                font-weight: 400;
+                margin: 0;
+            
+                @mixin info-locales ($sucursal){
+                    grid-area: $sucursal;
+                    margin: 0;
+                }
+                .sucursales__locales__info-lanus {
+                    @include info-locales(fotoLanus)
+                }
+                .sucursales__locales__info-lomas {
+                    @include info-locales(fotoLomas)
+                }
+                .sucursales__locales__info-lomas {
+                    @include info-locales(fotoAdrogue)
+                }
+            }
+            .sucursales__img {
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                width: 350px;
+            }
+        }
+        .sucursales__locales:hover {
+            transform: translateY(-15px);
+            box-shadow: 15px 15px #e08686; 
+        }
+    }
+    
+    /*faq*/
+    .faq {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $blanco;
+
+        .faq__grilla {
+            margin: 25px;
+            display: grid;
+            grid-template-areas: 
+            "preg-resp preg-resp" 
+            "formulario formulario";
+            grid-template-rows: auto;
+            grid-template-columns: 700px;
+            box-shadow: 15px 15px $rosa-nav; 
+        }
+        .faq__form {
+            background-color: $rosa-pages; 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            grid-area: formulario;
+            width: 700px;
+        }
+        .faq__preguntas {
+            background-color: #fbdada;
+            margin: 0;
+            grid-area: preg-resp;
+            width: 700px;
+        }
+        .faq__pregRta {
+            margin: 0;
+            width: 700px;
+            height: auto;
+        }
+        .faq__container {
+            height: auto;
+            background-color: $rosa-claro;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .faq__titulo {
+            font-size: 24pt;
+            color:  $negro;
+            margin: 0;
+            background-color: $rosa-claro;
+            width: 700px;
+            height: auto;
+            grid-area: pregunta;
+        }
+        @mixin textos ($puntos, $peso){
+            font-size: $puntos;
+            font-weight: $peso;
+            color:  $negro;
+            margin: 0;
+            padding: 5px;
+            background-color: $rosa-claro;
+            width: 700px;
+            height: auto;
+            grid-area: pregunta;
+            text-align: center;
+        }
+        .faq__texto-preguntas {
+            @include textos (18pt, 600);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .faq__texto-respuestas {
+            @include textos (16pt, 400);
+        }
+        .formulario {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .form__completar {
+            width: 700px;
+            height: 600px;
+            background-color:  $negro;
+            border-top-left-radius: 10px;
+        }
+        .form__titulo {
+            font: $titulos;
+            color: $blanco;
+            margin: 0;
+            background-color: $negro;
+            width: 700px;
+            height: 80px;
+            grid-area: pregunta;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form__label {
+            margin: 0 0 0 30px;
+            color: $blanco;
+            font-size: 16pt;
+        }
+        @mixin input ($ancho) {
+            font-size: 18px;
+            margin: 10px 30px;
+            width: $ancho;
+            border-radius: 2px;
+        }
+        .form__input {
+            @include input(635px)
+        } 
+        .form__input-mail {
+            @include input(635px)
+        }
+        .form__input-textArea {
+            font-size: 18pt;
+            margin: 10px 30px;
+            width: 635px;
+            height: 230px;
+        }
+        .form__cta {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .form__button-faq {
+            background-color:$rosa-button;
+            color:$blanco;
+            font-size: 16pt;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 5px;
+            margin: 15px;
+            border: 2px solid $blanco;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+    }
+
+
+}
+@media screen and (min-width: 1200px) and (max-width:1500px){
+
+    /*index*/
+    .nav{
+        background-color:  #edb2b4;
+        height: 75px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+
+        .nav__logo {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+        }
+        .nav__menu{
+            font-size: 13px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            width: 60%;
+            .nav__menu-list {
+                height: auto;
+                padding: 0;
+                font-size: 14px;
+            }
+        }
+        .nav__button-menu {
+            font-size: 24pt;
+            letter-spacing: 3px;
+            font-weight: 900;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        .nav__button-menu :hover {
+            color: $blanco;
+        }
+        .nav__redes {
+            margin: 0;
+            width: 20%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .nav__redes-list {
+                height: auto;
+                padding: 0;
+                font-size: 14px;
+            }
+        }
+        .nav__button-redes {
+            font-size: 24pt;
+            letter-spacing: 3px;
+            font-weight: 900;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        .nav__button-redes :hover {
+            color: $blanco;
+        }
+    }
+    .carousel-inner, .slide {
+        width: 100%;
+        height: auto;
+    }
+    .banner {
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        transition: all 0.25s;
+        width: 100%;
+    
+        .banner__cta {
+            position: relative;
+            margin-top: 0;
+            left: 520px;
+            top: 450px;
+        }
+        .banner__button {
+            color:$blanco;
+            background-color: $rosa-button;
+            border-color:$blanco;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 5px;
+            height: 10px;
+            width: 80px;
+            padding: 5px 20px;
+            font-size: 24pt;
+            margin: 30px 0;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+    .banner__button:hover {
+        transform: translateY(-5px);
+        box-shadow: 5px 5px $blanco;
+        background-color:  $negro;
+        color: $blanco;
+        text-decoration: none;
+    }
+
+    /*locales*/
+    .sucursales {
+        background-color: $rosa-light;
+        margin: 75px 0 10px 0; 
+        display: flex;
+        justify-content: center;
+    
+        .sucursales__nuestroslocales {
+            background-color: $rosa-claro;
+            width: 400px;
+            height: 200px;
+            grid-area: nuestros-locales;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 20px;
+        }
+        .sucursales__locales {
+            margin: 20px;
+            padding: 0;
+            display: grid;
+            grid-template-areas:
+            "nuestros-locales"
+            "fotoLanus";
+            grid-template-rows: 200px;
+            box-shadow: 15px 15px $rosa-nav;
+            transition: all 0.25s;
+            border-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        
+            .sucursales__locales__barrios {
+                font-size: 24pt;
+                font-weight: 900;
+                color:  $negro;
+                margin-top: 20px;
+            }
+            .sucursales__locales__info {
+                font-size: 14pt;
+                font-weight: 400;
+                margin: 0;
+            
+                .sucursales__locales__info-lanus {
+                    grid-area: fotoLanus;
+                    margin: 0;
+                }
+                .sucursales__locales__info-lomas {
+                    grid-area: fotoLomas;
+                    margin: 0;
+                }
+                .sucursales__locales__info-lomas {
+                    grid-area: fotoAdrogue;
+                    margin: 0;
+                }
+            }
+            .sucursales__img {
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+        .sucursales__locales:hover {
+            transform: translateY(-15px);
+            box-shadow: 15px 15px #e08686; 
+        }
+    }
+}
