@@ -63,7 +63,7 @@ body {
       align-content: center;
       justify-content: space-evenly; }
   .nav .nav__button-menu {
-    font: 900 20pt "Kanit", sans-serif;
+    font: 700 20pt "Kanit", sans-serif;
     color: #0F0808;
     letter-spacing: 3px;
     margin: 10px;
@@ -75,34 +75,39 @@ body {
       text-decoration: none; }
   .nav .nav__redes {
     margin: 0;
-    width: 15%;
-    height: 80px;
+    width: 8%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center; }
     .nav .nav__redes .nav__redes-list {
       width: 100%;
-      height: 80px;
+      height: auto;
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: row;
       align-content: center;
-      justify-content: space-evenly; }
+      justify-content: space-around; }
   .nav .nav__button-redes {
-    font: 900 20pt "Kanit", sans-serif;
+    font: 700 20pt "Kanit", sans-serif;
     color: #0F0808;
     letter-spacing: 3px;
-    margin: 10px;
+    margin: 3px;
     height: auto;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     transition: all 300ms ease; }
     .nav .nav__button-redes .nav__button-redes:hover {
       color: #FFFF;
       text-decoration: none; }
 
 /*index*/
+.flag {
+  display: none; }
+
 .banner {
   display: flex;
   position: relative;
@@ -121,7 +126,7 @@ body {
     border-color: #FFFF;
     border-width: 2px;
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 10px;
     height: 10px;
     width: 80px;
     padding: 5px 20px;
@@ -166,10 +171,10 @@ body {
     border-width: 2px;
     border-style: solid;
     border-radius: 12px;
-    height: 20px;
+    height: 18px;
     width: 80px;
-    padding: 5px;
-    font-size: 24pt;
+    padding: 15px;
+    font-size: 20pt;
     font-weight: 600;
     margin: 0;
     text-decoration: none; }
@@ -689,7 +694,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: fixed;
     height: 80px; }
     .nav .nav__logo {
       width: 85%;
@@ -732,8 +737,17 @@ body {
     background-color: #FFFF;
     width: 100%;
     height: auto; }
-  .banner, .banner__cta, .banner__button {
+  .banner, .banner__cta, .banner__button, .carousel-inner, .slide {
     display: none; }
+  .flag {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    font-size: 38pt;
+    font-weight: 800;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px 0 10px 0; }
   .opcionesIndex {
     max-width: 100%;
     height: 1500px;
@@ -843,7 +857,7 @@ body {
   /*Locales*/
   .sucursales {
     background-color: #FFFF;
-    margin: 80px 0 10px 0;
+    margin: 0 0 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; }
@@ -1020,7 +1034,7 @@ body {
   /*Pedido*/
   .pedido {
     background-color: #FFFF;
-    margin-top: 80px;
+    margin-top: 0;
     display: flex;
     justify-content: center; }
     .pedido .pedido__formulario {
@@ -2293,7 +2307,7 @@ body {
     .nav .nav__button-menu {
       font-size: 18pt;
       letter-spacing: 3px;
-      font-weight: 900;
+      font-weight: 700;
       display: inline-block;
       margin: 0;
       padding: 0; }
@@ -2301,7 +2315,7 @@ body {
       color: #FFFF; }
     .nav .nav__redes {
       margin: 0;
-      width: 20%;
+      width: 8%;
       height: auto;
       display: flex;
       flex-direction: row;

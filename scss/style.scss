@@ -8,7 +8,7 @@ $negro: #0F0808;
 $blanco:#FFFF;
 
     /*Tipografias*/
-$nav-font: 900 20pt 'Kanit', sans-serif;
+$nav-font: 700 20pt 'Kanit', sans-serif;
 $titulos: 700 28pt 'Kanit', sans-serif;
 $textos: 400 18pt 'Kanit', sans-serif;
 $textos-destacados: 700 18pt 'Kanit', sans-serif;
@@ -108,8 +108,8 @@ body {
     }
     .nav__redes {
         margin: 0;
-        width: 15%;
-        height: 80px;
+        width: 8%;
+        height: auto;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -117,13 +117,13 @@ body {
     
         @mixin listas {
             width: 100%;
-            height: 80px;
+            height: auto;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: row;
             align-content: center;
-            justify-content: space-evenly;
+            justify-content: space-around;
         }
         .nav__redes-list{
             @include listas;
@@ -133,9 +133,11 @@ body {
         font: $nav-font;
         color: $negro;
         letter-spacing: 3px;
-        margin: 10px;
+        margin: 3px;
         height: auto;
-        display: inline-block;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
         transition: all 300ms ease;
     
         @mixin hover {
@@ -149,6 +151,10 @@ body {
 }
 
     /*index*/
+
+    .flag {
+        display: none;
+    }
 .banner {
     display: flex;
     position: relative;
@@ -169,7 +175,7 @@ body {
         border-color:$blanco;
         border-width: 2px;
         border-style: solid;
-        border-radius: 20px;
+        border-radius: 10px;
         height: 10px;
         width: 80px;
         padding: 5px 20px;
@@ -217,10 +223,10 @@ body {
         border-width: 2px;
         border-style: solid;
         border-radius: 12px;
-        height: 20px;
+        height: 18px;
         width: 80px;
-        padding: 5px;
-        font-size: 24pt;
+        padding: 15px;
+        font-size: 20pt;
         font-weight: 600;
         margin: 0;
         text-decoration: none;
@@ -814,7 +820,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: absolute;
+        position: fixed;
         height: 80px;
 
         .nav__logo {
@@ -870,8 +876,18 @@ body {
         width: 100%;
         height: auto;
     }
-    .banner, .banner__cta, .banner__button {
+    .banner, .banner__cta, .banner__button, .carousel-inner, .slide {
         display: none;
+    }
+    .flag {
+        display: flex;
+        justify-content: center;
+        height: auto;
+        font-size: 38pt;
+        font-weight: 800;
+        text-align: center;
+        margin: 20px 0;
+        padding: 20px 0 10px 0;
     }
     .opcionesIndex{
         max-width: 100%;
@@ -1008,7 +1024,7 @@ body {
     /*Locales*/
     .sucursales {
         background-color: $blanco;
-        margin: 80px 0 10px 0; 
+        margin: 0 0 10px 0; 
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -1219,7 +1235,7 @@ body {
     /*Pedido*/
     .pedido {
         background-color:$blanco;
-        margin-top: 80px;
+        margin-top: 0;
         display: flex;
         justify-content: center;
 
@@ -2752,7 +2768,7 @@ body {
         .nav__button-menu {
             font-size: 18pt;
             letter-spacing: 3px;
-            font-weight: 900;
+            font-weight: 700;
             display: inline-block;
             margin: 0;
             padding: 0;
@@ -2762,7 +2778,7 @@ body {
         }
         .nav__redes {
             margin: 0;
-            width: 20%;
+            width: 8%;
             height: auto;
             display: flex;
             flex-direction: row;
