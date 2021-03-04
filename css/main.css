@@ -27,7 +27,8 @@ body {
   .nav .nav__img {
     margin: 0;
     height: 65px;
-    width: auto;
+    width: 80%;
+    height: 80%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -2272,6 +2273,9 @@ body {
       display: flex;
       flex-direction: row;
       width: auto; }
+    .nav .nav__img {
+      width: 70%;
+      height: 70%; }
     .nav .nav__menu {
       font-size: 13px;
       display: flex;
@@ -2287,7 +2291,7 @@ body {
         padding: 0;
         font-size: 14px; }
     .nav .nav__button-menu {
-      font-size: 24pt;
+      font-size: 18pt;
       letter-spacing: 3px;
       font-weight: 900;
       display: inline-block;
@@ -2308,7 +2312,7 @@ body {
         padding: 0;
         font-size: 14px; }
     .nav .nav__button-redes {
-      font-size: 24pt;
+      font-size: 18pt;
       letter-spacing: 3px;
       font-weight: 900;
       display: inline-block;
