@@ -223,28 +223,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0; }
+  margin: 50px 0; }
   .ubicacion .ubicacion__titulo {
     font: 700 28pt "Kanit", sans-serif;
     height: 50px;
     padding: 0;
-    margin: 0;
+    margin: 20px 0;
     display: flex;
     justify-content: center;
     grid-area: titulo;
     border-radius: 10px; }
   .ubicacion .ubicacion__sucursales {
-    margin: 50px 0;
-    width: 500px;
+    margin: 0;
+    width: 700px;
     display: grid;
     grid-template-areas: "titulo titulo" "mapa info";
-    grid-template-columns: 500px;
-    grid-template-rows: 60px  600px;
+    grid-template-columns: 700px;
+    grid-template-rows: 100px 600px;
     justify-content: center;
     align-content: center;
     border-radius: 10px; }
   .ubicacion .ubicacion__mapa {
-    width: 500px;
+    width: 700px;
     height: 600px;
     margin: 0;
     grid-area: mapa;
@@ -253,13 +253,13 @@ body {
     border-bottom-left-radius: 10px; }
   .ubicacion .ubicacion__locales {
     background-color: #FFFF;
-    width: 500px;
+    width: 700px;
     height: 600px;
     margin: 0;
     grid-area: info;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     box-shadow: 15px 15px #edb2b4;
     border-top-right-radius: 10px;
@@ -272,6 +272,108 @@ body {
       font: 400 18pt "Kanit", sans-serif;
       color: #0F0808;
       margin: 0; }
+
+/*FAQ*/
+.usuarios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #0F0808; }
+  .usuarios .preg__container {
+    height: 500px;
+    background-color: #0F0808;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .usuarios .preg__titulo {
+    font: 700 28pt "Kanit", sans-serif;
+    color: #FFFF;
+    margin: 0;
+    background-color: #0F0808;
+    width: 600px;
+    height: 80px;
+    grid-area: pregunta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; }
+  .usuarios .preg__texto-preguntas {
+    font-size: 16pt;
+    font-weight: 700;
+    color: #FFFF;
+    margin: 0;
+    background-color: #0F0808;
+    width: 600px;
+    height: auto;
+    grid-area: pregunta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0 10px 0; }
+  .usuarios .preg__texto-respuestas {
+    font-size: 14pt;
+    font-weight: 400;
+    color: #FFFF;
+    margin: 0;
+    background-color: #0F0808;
+    width: 600px;
+    height: auto;
+    grid-area: pregunta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 20px; }
+  .usuarios .reserva__box {
+    margin: 0;
+    display: flex;
+    flex-direction: column; }
+  .usuarios .reserva__form {
+    width: 600px;
+    height: 500px;
+    background-color: #0F0808;
+    margin: 0; }
+  .usuarios .reserva__titulo {
+    font: 700 28pt "Kanit", sans-serif;
+    color: #FFFF;
+    margin: 0;
+    background-color: #0F0808;
+    width: 600px;
+    height: 80px;
+    grid-area: pregunta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px; }
+  .usuarios .reserva__input {
+    width: 540px;
+    font-size: 14pt;
+    font-weight: 300;
+    margin: 10px 30px; }
+  .usuarios .reserva__input-textArea {
+    font-size: 14pt;
+    font-weight: 300;
+    margin: 10px 30px;
+    width: 540px; }
+  .usuarios .reserva__cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .usuarios .reserva__cta-button {
+    background-color: #e08686;
+    color: #FFFF;
+    width: 200px;
+    font-size: 16pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin: 10px;
+    border: 2px solid #FFFF;
+    border-radius: 5px;
+    text-transform: uppercase; }
 
 /*Footer*/
 .footer {
@@ -747,7 +849,7 @@ body {
     font-weight: 800;
     text-align: center;
     margin: 20px 0;
-    padding: 20px 0 10px 0; }
+    padding: 0; }
   .opcionesIndex {
     max-width: 100%;
     height: 1500px;
@@ -760,6 +862,30 @@ body {
     height: 250px; }
   .ubicacion {
     display: none; }
+  .usuarios {
+    display: flex;
+    flex-direction: column; }
+  .reserva__form, .reserva__titulo {
+    max-width: 100%; }
+  .preg__texto-preguntas, .preg__texto-respuestas {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 0; }
+  .preg__container {
+    max-width: 85%;
+    height: 200px;
+    text-align: center;
+    padding: 0; }
+  .preg__titulo {
+    width: 100%;
+    height: 100%;
+    font-size: 14pt; }
+  .reserva__input, .reserva__input-textArea {
+    font-size: 12pt;
+    font-weight: 300;
+    margin: 10px 20px;
+    max-width: 85%; }
   .footer {
     width: auto; }
     .footer .footer__locales {

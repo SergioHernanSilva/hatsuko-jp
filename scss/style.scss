@@ -152,7 +152,7 @@ body {
 
     /*index*/
 
-    .flag {
+.flag {
         display: none;
     }
 .banner {
@@ -271,33 +271,33 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 50px 0;
 
     .ubicacion__titulo {
         font: $titulos;
         height: 50px;
         padding: 0;
-        margin: 0;
+        margin: 20px 0;
         display: flex;
         justify-content: center;
         grid-area: titulo;
         border-radius: 10px;
     }
     .ubicacion__sucursales {
-        margin: 50px 0;
-        width: 500px;
+        margin: 0;
+        width: 700px;
         display: grid;
         grid-template-areas: 
         "titulo titulo"
         "mapa info";
-        grid-template-columns: 500px;
-        grid-template-rows: 60px  600px;
+        grid-template-columns: 700px;
+        grid-template-rows: 100px 600px;
         justify-content: center;
         align-content: center;
         border-radius: 10px;
     }
     .ubicacion__mapa {
-        width: 500px;
+        width: 700px;
         height: 600px;
         margin: 0;
         grid-area: mapa;
@@ -307,13 +307,13 @@ body {
     }
     .ubicacion__locales {
         background-color: $blanco;
-        width: 500px;
+        width: 700px;
         height: 600px;
         margin: 0;
         grid-area: info;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         box-shadow: 15px 15px $rosa-nav; 
         border-top-right-radius: 10px;
@@ -329,6 +329,111 @@ body {
             color: $negro;
             margin: 0;
         }
+    }
+}
+   /*FAQ*/
+.usuarios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: $negro;
+    .preg__container {
+        height: 500px;
+        background-color: $negro;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .preg__titulo {
+        font: $titulos;
+        color:  $blanco;
+        margin: 0;
+        background-color: $negro;
+        width: 600px;
+        height: 80px;
+        grid-area: pregunta;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    @mixin textos ($puntos, $peso){
+        font-size: $puntos;
+        font-weight: $peso;
+        color:  $blanco;
+        margin: 0;
+        background-color: $negro;
+        width: 600px;
+        height: auto;
+        grid-area: pregunta;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .preg__texto-preguntas {
+        @include textos (16pt, 700);
+        padding: 20px 0 10px 0;
+    }
+    .preg__texto-respuestas {
+        @include textos (14pt, 400);
+        padding-bottom: 20px;
+    }
+    .reserva__box {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .reserva__form {
+        width: 600px;
+        height: 500px;
+        background-color:  $negro;
+        margin: 0;
+    }
+    .reserva__titulo {
+        font: $titulos;
+        color: $blanco;
+        margin: 0;
+        background-color: $negro;
+        width: 600px;
+        height: 80px;
+        grid-area: pregunta;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 10px;
+    }
+    .reserva__input {
+        width: 540px;
+        font-size: 14pt;
+        font-weight: 300;
+        margin: 10px 30px;
+    } 
+    .reserva__input-textArea {
+        font-size: 14pt;
+        font-weight: 300;
+        margin: 10px 30px;
+        width: 540px;
+    }
+    .reserva__cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .reserva__cta-button {
+        background-color:$rosa-button;
+        color:$blanco;
+        width: 200px;
+        font-size: 16pt;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 5px;
+        margin: 10px;
+        border: 2px solid $blanco;
+        border-radius: 5px;
+        text-transform: uppercase;
     }
 }
 
@@ -887,7 +992,7 @@ body {
         font-weight: 800;
         text-align: center;
         margin: 20px 0;
-        padding: 20px 0 10px 0;
+        padding: 0;
     }
     .opcionesIndex{
         max-width: 100%;
@@ -903,6 +1008,38 @@ body {
     }
     .ubicacion {
         display: none;
+    }
+    .usuarios {
+        display: flex;
+        flex-direction: column;
+    }
+    .reserva__form, .reserva__titulo {
+        max-width: 100%;
+    }
+    
+    .preg__texto-preguntas, .preg__texto-respuestas {
+        max-width: 100%;
+        height: auto;
+        text-align: center;
+        padding: 0;
+    }
+    .preg__container {
+        max-width: 85%;
+        height: 200px;
+        text-align: center;
+        padding: 0;
+
+    }
+    .preg__titulo {
+        width: 100%;
+        height: 100%;
+        font-size: 14pt;
+    }
+    .reserva__input, .reserva__input-textArea {
+        font-size: 12pt;
+        font-weight: 300;
+        margin: 10px 20px;
+        max-width: 85%;
     }
     .footer {
         width: auto;
