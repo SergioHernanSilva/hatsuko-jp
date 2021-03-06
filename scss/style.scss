@@ -285,19 +285,19 @@ body {
     }
     .ubicacion__sucursales {
         margin: 0;
-        width: 700px;
+        width: 600px;
         display: grid;
         grid-template-areas: 
         "titulo titulo"
         "mapa info";
-        grid-template-columns: 700px;
+        grid-template-columns: 600px;
         grid-template-rows: 100px 600px;
         justify-content: center;
         align-content: center;
         border-radius: 10px;
     }
     .ubicacion__mapa {
-        width: 700px;
+        width: 600px;
         height: 600px;
         margin: 0;
         grid-area: mapa;
@@ -307,7 +307,7 @@ body {
     }
     .ubicacion__locales {
         background-color: $blanco;
-        width: 700px;
+        width: 600px;
         height: 600px;
         margin: 0;
         grid-area: info;
@@ -331,55 +331,12 @@ body {
         }
     }
 }
-   /*FAQ*/
-.usuarios {
+   /*Para el usuario*/
+.reserva {
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: $negro;
-    .preg__container {
-        height: 500px;
-        background-color: $negro;
-        padding-left: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .preg__titulo {
-        font: $titulos;
-        color:  $blanco;
-        margin: 0;
-        background-color: $negro;
-        width: 600px;
-        height: 80px;
-        grid-area: pregunta;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    @mixin textos ($puntos, $peso){
-        font-size: $puntos;
-        font-weight: $peso;
-        color:  $blanco;
-        margin: 0;
-        background-color: $negro;
-        width: 600px;
-        height: auto;
-        grid-area: pregunta;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .preg__texto-preguntas {
-        @include textos (16pt, 700);
-        padding: 20px 0 10px 0;
-    }
-    .preg__texto-respuestas {
-        @include textos (14pt, 400);
-        padding-bottom: 20px;
-    }
     .reserva__box {
         margin: 0;
         display: flex;
@@ -728,7 +685,6 @@ body {
     .faq__texto-respuestas {
         @include textos (14pt, 500);
     }
-
     .formulario {
         margin: 0;
         display: flex;
@@ -755,21 +711,11 @@ body {
         align-items: center;
         border-top-left-radius: 10px;
     }
-    .form__label {
-        margin-left: 30px;
-        color: $blanco;
-    }
-    @mixin input ($ancho) {
-        font-size: 18pt;
-        margin: 5px 30px 5px 5px;
-        width: $ancho;
-        border-radius: 2px;
-    }
     .form__input {
-        @include input(472px)
-    } 
-    .form__input-mail {
-        @include input(492px)
+        width: 540px;
+        font-size: 14pt;
+        font-weight: 300;
+        margin: 10px 30px;
     }
     .form__input-textArea {
         font-size: 14pt;
@@ -933,7 +879,7 @@ body {
             height: 80%;
         }
         .nav__img {
-            margin-right: 10px;
+            margin: 0;
             width: 70%;
             height: 70%;
         }
@@ -987,12 +933,14 @@ body {
     .flag {
         display: flex;
         justify-content: center;
-        height: auto;
+        align-items: center;
+        height: 160px;
         font-size: 38pt;
         font-weight: 800;
         text-align: center;
-        margin: 20px 0;
+        margin: 0;
         padding: 0;
+        line-height: 50px;
     }
     .opcionesIndex{
         max-width: 100%;
@@ -1009,31 +957,17 @@ body {
     .ubicacion {
         display: none;
     }
-    .usuarios {
+    .reserva {
         display: flex;
         flex-direction: column;
-    }
-    .reserva__form, .reserva__titulo {
-        max-width: 100%;
-    }
-    
-    .preg__texto-preguntas, .preg__texto-respuestas {
-        max-width: 100%;
         height: auto;
-        text-align: center;
-        padding: 0;
     }
-    .preg__container {
-        max-width: 85%;
-        height: 200px;
-        text-align: center;
-        padding: 0;
-
+    .reserva__form {
+        max-width: 100%;
+        height: 700px;
     }
-    .preg__titulo {
-        width: 100%;
-        height: 100%;
-        font-size: 14pt;
+    .reserva__titulo {
+        max-width: 100%;
     }
     .reserva__input, .reserva__input-textArea {
         font-size: 12pt;
@@ -1303,17 +1237,19 @@ body {
         .faq__texto-respuestas {
             @include textos (10pt, 400);
         }
-
         .formulario {
             margin: 0;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            width: 360px;
         }
         .form__completar {
             width: 360px;
             height: 550px;
             background-color:  $negro;
-            border-top-left-radius: 10px;
         }
         .form__titulo {
             font: $titulos;
@@ -1327,27 +1263,18 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-        .form__label {
-            margin: 0 0 0 30px;
-            color: $blanco;
-        }
-        @mixin input ($ancho) {
-            font-size: 16pt;
-            margin: 10px 30px;
-            width: $ancho;
-            border-radius: 2px;
+            text-align: center;
         }
         .form__input {
-            @include input(295px)
-        } 
-        .form__input-mail {
-            @include input(295px)
+            font-size: 12pt;
+            margin: 10px 30px;
+            width: 85%;
+            height: 25px;
         }
         .form__input-textArea {
-            font-size: 18pt;
+            font-size: 16pt;
             margin: 10px 30px;
-            width: 295px;
+            width: 85%;
             height: 200px;
         }
         .form__cta {
@@ -1883,26 +1810,17 @@ body {
             justify-content: center;
             align-items: center;
         }
-        .form__label {
-            margin: 0 0 0 30px;
-            color: $blanco;
-        }
-        @mixin input ($ancho) {
-            font-size: 14px;
-            margin: 10px 30px;
-            width: $ancho;
-            border-radius: 2px;
-        }
         .form__input {
-            @include input(295px)
+            font-size: 16px;
+            margin: 10px 30px;
+            width: 295px;
+            font-weight: 300;
         } 
-        .form__input-mail {
-            @include input(295px)
-        }
         .form__input-textArea {
             font-size: 16px;
             margin: 10px 30px;
             width: 295px;
+            font-weight: 300;
             height: 200px;
         }
         .form__cta {
@@ -2025,7 +1943,7 @@ body {
         }
     }
     .ubicacion {
-        width: auto;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -2038,7 +1956,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: auto;
+            width: 100%;
             font-size: 20pt;
             height: 40px;
             grid-area: titulo;
@@ -2052,7 +1970,7 @@ body {
             grid-template-areas: 
             "titulo"
             "info";
-            grid-template-columns: 500px;
+            grid-template-columns: 100%;
             grid-template-rows: 60px  600px;
         }
         .ubicacion__locales {
@@ -2342,27 +2260,17 @@ body {
             justify-content: center;
             align-items: center;
         }
-        .form__label {
-            margin: 0 0 0 30px;
-            color: $blanco;
-            font-size: 16pt;
-        }
-        @mixin input ($ancho) {
-            font-size: 16pt;
-            margin: 5px 30px;
-            width: $ancho;
-            border-radius: 2px;
-        }
         .form__input {
-            @include input(635px)
-        } 
-        .form__input-mail {
-            @include input(635px)
+            font-size: 18pt;
+            margin: 10px 30px;
+            width: 635px;
+            font-weight: 300;
         }
         .form__input-textArea {
             font-size: 18pt;
             margin: 10px 30px;
             width: 635px;
+            font-weight: 300;
             height: 230px;
         }
         .form__cta {
@@ -2504,7 +2412,7 @@ body {
         background-repeat: no-repeat;    
     }
     .ubicacion {
-        width: auto;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -2517,7 +2425,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: auto;
+            width: 100%;
             font-size: 20pt;
             height: 40px;
             grid-area: titulo;
@@ -2531,7 +2439,7 @@ body {
             grid-template-areas: 
             "titulo"
             "info";
-            grid-template-columns: 500px;
+            grid-template-columns: 100%;
             grid-template-rows: 60px  600px;
         }
         .ubicacion__locales {
@@ -2820,26 +2728,16 @@ body {
             justify-content: center;
             align-items: center;
         }
-        .form__label {
-            margin: 0 0 0 30px;
-            color: $blanco;
-            font-size: 16pt;
-        }
-        @mixin input ($ancho) {
-            font-size: 18px;
-            margin: 10px 30px;
-            width: $ancho;
-            border-radius: 2px;
-        }
         .form__input {
-            @include input(635px)
+            font-size: 18pt;
+            margin: 10px 30px;
+            font-weight: 300;
+            width: 635px;
         } 
-        .form__input-mail {
-            @include input(635px)
-        }
         .form__input-textArea {
             font-size: 18pt;
             margin: 10px 30px;
+            font-weight: 300;
             width: 635px;
             height: 230px;
         }
@@ -2979,6 +2877,70 @@ body {
         background-color:  $negro;
         color: $blanco;
         text-decoration: none;
+    }
+    .ubicacion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+    
+        .ubicacion__titulo {
+            font: $titulos;
+            height: 50px;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            grid-area: titulo;
+            border-radius: 10px;
+        }
+        .ubicacion__sucursales {
+            margin: 0;
+            width: 500px;
+            display: grid;
+            grid-template-areas: 
+            "titulo titulo"
+            "mapa info";
+            grid-template-columns: 600px;
+            grid-template-rows: 100px 600px;
+            justify-content: center;
+            align-content: center;
+            border-radius: 10px;
+        }
+        .ubicacion__mapa {
+            width: 700px;
+            height: 600px;
+            margin: 0;
+            grid-area: mapa;
+            box-shadow: 15px 15px $rosa-nav;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .ubicacion__locales {
+            background-color: $blanco;
+            width: 600px;
+            height: 600px;
+            margin: 0;
+            grid-area: info;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 15px 15px $rosa-nav; 
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        
+            .ubicacion__locales__info {
+                font: $titulos;
+                color: $negro;
+                margin: 10px;
+            }
+            .ubicacion__locales__info-texto{
+                font: $textos;
+                color: $negro;
+                margin: 0;
+            }
+        }
     }
 
     /*locales*/

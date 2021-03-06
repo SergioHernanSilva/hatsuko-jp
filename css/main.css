@@ -235,16 +235,16 @@ body {
     border-radius: 10px; }
   .ubicacion .ubicacion__sucursales {
     margin: 0;
-    width: 700px;
+    width: 600px;
     display: grid;
     grid-template-areas: "titulo titulo" "mapa info";
-    grid-template-columns: 700px;
+    grid-template-columns: 600px;
     grid-template-rows: 100px 600px;
     justify-content: center;
     align-content: center;
     border-radius: 10px; }
   .ubicacion .ubicacion__mapa {
-    width: 700px;
+    width: 600px;
     height: 600px;
     margin: 0;
     grid-area: mapa;
@@ -253,7 +253,7 @@ body {
     border-bottom-left-radius: 10px; }
   .ubicacion .ubicacion__locales {
     background-color: #FFFF;
-    width: 700px;
+    width: 600px;
     height: 600px;
     margin: 0;
     grid-area: info;
@@ -273,69 +273,22 @@ body {
       color: #0F0808;
       margin: 0; }
 
-/*FAQ*/
-.usuarios {
+/*Para el usuario*/
+.reserva {
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: #0F0808; }
-  .usuarios .preg__container {
-    height: 500px;
-    background-color: #0F0808;
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; }
-  .usuarios .preg__titulo {
-    font: 700 28pt "Kanit", sans-serif;
-    color: #FFFF;
-    margin: 0;
-    background-color: #0F0808;
-    width: 600px;
-    height: 80px;
-    grid-area: pregunta;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; }
-  .usuarios .preg__texto-preguntas {
-    font-size: 16pt;
-    font-weight: 700;
-    color: #FFFF;
-    margin: 0;
-    background-color: #0F0808;
-    width: 600px;
-    height: auto;
-    grid-area: pregunta;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px 0 10px 0; }
-  .usuarios .preg__texto-respuestas {
-    font-size: 14pt;
-    font-weight: 400;
-    color: #FFFF;
-    margin: 0;
-    background-color: #0F0808;
-    width: 600px;
-    height: auto;
-    grid-area: pregunta;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-bottom: 20px; }
-  .usuarios .reserva__box {
+  .reserva .reserva__box {
     margin: 0;
     display: flex;
     flex-direction: column; }
-  .usuarios .reserva__form {
+  .reserva .reserva__form {
     width: 600px;
     height: 500px;
     background-color: #0F0808;
     margin: 0; }
-  .usuarios .reserva__titulo {
+  .reserva .reserva__titulo {
     font: 700 28pt "Kanit", sans-serif;
     color: #FFFF;
     margin: 0;
@@ -348,21 +301,21 @@ body {
     justify-content: center;
     align-items: center;
     border-top-left-radius: 10px; }
-  .usuarios .reserva__input {
+  .reserva .reserva__input {
     width: 540px;
     font-size: 14pt;
     font-weight: 300;
     margin: 10px 30px; }
-  .usuarios .reserva__input-textArea {
+  .reserva .reserva__input-textArea {
     font-size: 14pt;
     font-weight: 300;
     margin: 10px 30px;
     width: 540px; }
-  .usuarios .reserva__cta {
+  .reserva .reserva__cta {
     display: flex;
     flex-direction: row;
     justify-content: center; }
-  .usuarios .reserva__cta-button {
+  .reserva .reserva__cta-button {
     background-color: #e08686;
     color: #FFFF;
     width: 200px;
@@ -656,19 +609,11 @@ body {
     justify-content: center;
     align-items: center;
     border-top-left-radius: 10px; }
-  .faq .form__label {
-    margin-left: 30px;
-    color: #FFFF; }
   .faq .form__input {
-    font-size: 18pt;
-    margin: 5px 30px 5px 5px;
-    width: 472px;
-    border-radius: 2px; }
-  .faq .form__input-mail {
-    font-size: 18pt;
-    margin: 5px 30px 5px 5px;
-    width: 492px;
-    border-radius: 2px; }
+    width: 540px;
+    font-size: 14pt;
+    font-weight: 300;
+    margin: 10px 30px; }
   .faq .form__input-textArea {
     font-size: 14pt;
     margin: 10px 30px;
@@ -802,7 +747,7 @@ body {
       width: 85%;
       height: 80%; }
     .nav .nav__img {
-      margin-right: 10px;
+      margin: 0;
       width: 70%;
       height: 70%; }
     .nav .nav__menu {
@@ -844,12 +789,14 @@ body {
   .flag {
     display: flex;
     justify-content: center;
-    height: auto;
+    align-items: center;
+    height: 160px;
     font-size: 38pt;
     font-weight: 800;
     text-align: center;
-    margin: 20px 0;
-    padding: 0; }
+    margin: 0;
+    padding: 0;
+    line-height: 50px; }
   .opcionesIndex {
     max-width: 100%;
     height: 1500px;
@@ -862,25 +809,15 @@ body {
     height: 250px; }
   .ubicacion {
     display: none; }
-  .usuarios {
+  .reserva {
     display: flex;
-    flex-direction: column; }
-  .reserva__form, .reserva__titulo {
-    max-width: 100%; }
-  .preg__texto-preguntas, .preg__texto-respuestas {
+    flex-direction: column;
+    height: auto; }
+  .reserva__form {
     max-width: 100%;
-    height: auto;
-    text-align: center;
-    padding: 0; }
-  .preg__container {
-    max-width: 85%;
-    height: 200px;
-    text-align: center;
-    padding: 0; }
-  .preg__titulo {
-    width: 100%;
-    height: 100%;
-    font-size: 14pt; }
+    height: 700px; }
+  .reserva__titulo {
+    max-width: 100%; }
   .reserva__input, .reserva__input-textArea {
     font-size: 12pt;
     font-weight: 300;
@@ -1106,12 +1043,15 @@ body {
     .faq .formulario {
       margin: 0;
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      width: 360px; }
     .faq .form__completar {
       width: 360px;
       height: 550px;
-      background-color: #0F0808;
-      border-top-left-radius: 10px; }
+      background-color: #0F0808; }
     .faq .form__titulo {
       font: 700 28pt "Kanit", sans-serif;
       color: #FFFF;
@@ -1123,24 +1063,17 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
-    .faq .form__label {
-      margin: 0 0 0 30px;
-      color: #FFFF; }
+      align-items: center;
+      text-align: center; }
     .faq .form__input {
-      font-size: 16pt;
+      font-size: 12pt;
       margin: 10px 30px;
-      width: 295px;
-      border-radius: 2px; }
-    .faq .form__input-mail {
-      font-size: 16pt;
-      margin: 10px 30px;
-      width: 295px;
-      border-radius: 2px; }
+      width: 85%;
+      height: 25px; }
     .faq .form__input-textArea {
-      font-size: 18pt;
+      font-size: 16pt;
       margin: 10px 30px;
-      width: 295px;
+      width: 85%;
       height: 200px; }
     .faq .form__cta {
       display: flex;
@@ -1578,23 +1511,16 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-    .faq .form__label {
-      margin: 0 0 0 30px;
-      color: #FFFF; }
     .faq .form__input {
-      font-size: 14px;
+      font-size: 16px;
       margin: 10px 30px;
       width: 295px;
-      border-radius: 2px; }
-    .faq .form__input-mail {
-      font-size: 14px;
-      margin: 10px 30px;
-      width: 295px;
-      border-radius: 2px; }
+      font-weight: 300; }
     .faq .form__input-textArea {
       font-size: 16px;
       margin: 10px 30px;
       width: 295px;
+      font-weight: 300;
       height: 200px; }
     .faq .form__cta {
       display: flex;
@@ -1698,7 +1624,7 @@ body {
       margin: 15px;
       font-size: 18pt; }
   .ubicacion {
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1711,7 +1637,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: auto;
+      width: 100%;
       font-size: 20pt;
       height: 40px;
       grid-area: titulo; }
@@ -1721,7 +1647,7 @@ body {
       margin: 10px;
       display: grid;
       grid-template-areas: "titulo" "info";
-      grid-template-columns: 500px;
+      grid-template-columns: 100%;
       grid-template-rows: 60px  600px; }
     .ubicacion .ubicacion__locales {
       display: flex;
@@ -1961,24 +1887,16 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-    .faq .form__label {
-      margin: 0 0 0 30px;
-      color: #FFFF;
-      font-size: 16pt; }
     .faq .form__input {
-      font-size: 16pt;
-      margin: 5px 30px;
+      font-size: 18pt;
+      margin: 10px 30px;
       width: 635px;
-      border-radius: 2px; }
-    .faq .form__input-mail {
-      font-size: 16pt;
-      margin: 5px 30px;
-      width: 635px;
-      border-radius: 2px; }
+      font-weight: 300; }
     .faq .form__input-textArea {
       font-size: 18pt;
       margin: 10px 30px;
       width: 635px;
+      font-weight: 300;
       height: 230px; }
     .faq .form__cta {
       display: flex;
@@ -2095,7 +2013,7 @@ body {
     background-image: url(../img/dumpling922.jpg);
     background-repeat: no-repeat; }
   .ubicacion {
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -2108,7 +2026,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: auto;
+      width: 100%;
       font-size: 20pt;
       height: 40px;
       grid-area: titulo; }
@@ -2118,7 +2036,7 @@ body {
       margin: 10px;
       display: grid;
       grid-template-areas: "titulo" "info";
-      grid-template-columns: 500px;
+      grid-template-columns: 100%;
       grid-template-rows: 60px  600px; }
     .ubicacion .ubicacion__locales {
       display: flex;
@@ -2363,23 +2281,15 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-    .faq .form__label {
-      margin: 0 0 0 30px;
-      color: #FFFF;
-      font-size: 16pt; }
     .faq .form__input {
-      font-size: 18px;
+      font-size: 18pt;
       margin: 10px 30px;
-      width: 635px;
-      border-radius: 2px; }
-    .faq .form__input-mail {
-      font-size: 18px;
-      margin: 10px 30px;
-      width: 635px;
-      border-radius: 2px; }
+      font-weight: 300;
+      width: 635px; }
     .faq .form__input-textArea {
       font-size: 18pt;
       margin: 10px 30px;
+      font-weight: 300;
       width: 635px;
       height: 230px; }
     .faq .form__cta {
@@ -2495,6 +2405,59 @@ body {
     background-color: #0F0808;
     color: #FFFF;
     text-decoration: none; }
+  .ubicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0; }
+    .ubicacion .ubicacion__titulo {
+      font: 700 28pt "Kanit", sans-serif;
+      height: 50px;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      grid-area: titulo;
+      border-radius: 10px; }
+    .ubicacion .ubicacion__sucursales {
+      margin: 0;
+      width: 500px;
+      display: grid;
+      grid-template-areas: "titulo titulo" "mapa info";
+      grid-template-columns: 600px;
+      grid-template-rows: 100px 600px;
+      justify-content: center;
+      align-content: center;
+      border-radius: 10px; }
+    .ubicacion .ubicacion__mapa {
+      width: 700px;
+      height: 600px;
+      margin: 0;
+      grid-area: mapa;
+      box-shadow: 15px 15px #edb2b4;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px; }
+    .ubicacion .ubicacion__locales {
+      background-color: #FFFF;
+      width: 600px;
+      height: 600px;
+      margin: 0;
+      grid-area: info;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 15px 15px #edb2b4;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; }
+      .ubicacion .ubicacion__locales .ubicacion__locales__info {
+        font: 700 28pt "Kanit", sans-serif;
+        color: #0F0808;
+        margin: 10px; }
+      .ubicacion .ubicacion__locales .ubicacion__locales__info-texto {
+        font: 400 18pt "Kanit", sans-serif;
+        color: #0F0808;
+        margin: 0; }
   /*locales*/
   .sucursales {
     background-color: #F9F4F4;
