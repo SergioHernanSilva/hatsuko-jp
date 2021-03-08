@@ -1190,42 +1190,47 @@ body {
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 75px; }
+    position: fixed;
+    height: 80px; }
     .nav .nav__logo {
-      display: inline-block;
-      justify-content: flex-start;
-      width: 15%; }
+      width: 85%;
+      height: 80%; }
     .nav .nav__img {
-      height: 40px;
       margin: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-content: flex-start;
-      align-items: flex-start;
-      width: auto; }
-    .nav .nav__menu-list {
-      width: 300px;
-      display: inline-block;
-      justify-content: center;
-      margin: 0;
-      padding: 0; }
-    .nav .nav__button-menu {
-      font-size: 16pt;
-      letter-spacing: 3px;
-      font-weight: 900;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin: 5px;
-      padding: 0; }
-    .nav .nav__redes, .nav .nav__redes-list, .nav .nav__button-redes {
+      width: 70%;
+      height: 70%; }
+    .nav .nav__menu {
+      background-color: #edb2b4;
+      height: 1px;
+      position: relative;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      margin-top: -110%;
+      transition: all 500ms ease; }
+      .nav .nav__menu .nav__menu-list {
+        background-color: #edb2b4;
+        flex-direction: column;
+        border-top: 1px solid #FFFF;
+        width: 100%;
+        margin-top: 0;
+        font-size: 12pt;
+        height: 150px;
+        padding-left: 15px; }
+    .nav .nav__redes {
       display: none; }
+    .nav .nav__icon {
+      display: block;
+      margin: 0; }
+    .nav #nav__btn:checked ~ .nav__menu {
+      margin: 0; }
+    .nav .nav__button-menu {
+      font-size: 14pt;
+      margin: 0; }
+  .nav__button {
+    display: flex; }
   .banner {
     display: none; }
   .banner__button {
@@ -1541,47 +1546,47 @@ body {
 @media screen and (min-width: 768px) and (max-width: 922px) {
   .nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 75px; }
+    position: fixed;
+    height: 80px; }
     .nav .nav__logo {
-      display: flex;
-      flex-direction: row;
-      width: 50px; }
+      width: 85%;
+      height: 80%; }
     .nav .nav__img {
-      height: 50px;
-      width: auto;
-      margin-left: 10px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-content: center;
-      align-items: center; }
+      margin: 0;
+      width: 70%;
+      height: 70%; }
     .nav .nav__menu {
-      font-size: 12pt;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      width: 70%; }
+      background-color: #edb2b4;
+      height: 1px;
+      position: relative;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      margin-top: -110%;
+      transition: all 500ms ease; }
       .nav .nav__menu .nav__menu-list {
-        height: auto;
-        padding: 0;
-        font-size: 12pt; }
-    .nav .nav__button-menu {
-      letter-spacing: 3px;
-      font-weight: 900;
-      display: inline-block;
-      justify-content: center;
-      margin: 0;
-      padding: 0; }
-    .nav .nav__redes, .nav .nav__redes-list, .nav .nav__button-redes {
+        background-color: #edb2b4;
+        flex-direction: column;
+        border-top: 1px solid #FFFF;
+        width: 100%;
+        margin-top: 0;
+        font-size: 12pt;
+        height: 150px;
+        padding-left: 15px; }
+    .nav .nav__redes {
       display: none; }
+    .nav .nav__icon {
+      display: block;
+      margin: 0; }
+    .nav #nav__btn:checked ~ .nav__menu {
+      margin: 0; }
+    .nav .nav__button-menu {
+      font-size: 14pt;
+      margin: 0; }
+  .nav__button {
+    display: flex; }
   /*Index*/
   .banner {
     height: 380px; }
@@ -2140,12 +2145,12 @@ body {
   /*Locales*/
   .sucursales {
     background-color: #F9F4F4;
-    margin: 75px 0 150px 0;
+    margin: 75px 0 50px 0;
     display: flex;
     justify-content: center; }
     .sucursales .sucursales__nuestroslocales {
       background-color: #fdecec;
-      width: 350px;
+      width: 250px;
       height: 200px;
       grid-area: nuestros-locales;
       display: flex;
@@ -2159,21 +2164,23 @@ body {
       display: grid;
       grid-template-areas: "nuestros-locales" "fotoLanus";
       grid-template-rows: auto;
-      grid-template-columns: 350px;
+      grid-template-columns: 250px;
       box-shadow: 15px 15px #edb2b4;
       transition: all 0.25s;
       border-radius: 10px;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px; }
       .sucursales .sucursales__locales .sucursales__locales__barrios {
-        font-size: 20pt;
+        font-size: 18pt;
         font-weight: 900;
         color: #0F0808;
-        margin-top: 20px; }
+        margin-top: 20px;
+        text-align: center; }
       .sucursales .sucursales__locales .sucursales__locales__info {
-        font-size: 14pt;
+        font-size: 12pt;
         font-weight: 400;
-        margin: 0; }
+        margin: 0;
+        text-align: center; }
         .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lanus {
           grid-area: fotoLanus;
           margin: 0; }
@@ -2186,7 +2193,7 @@ body {
       .sucursales .sucursales__locales .sucursales__img {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        width: 350px; }
+        width: 250px; }
     .sucursales .sucursales__locales:hover {
       transform: translateY(-15px);
       box-shadow: 15px 15px #e08686; }
@@ -2466,7 +2473,7 @@ body {
     justify-content: center; }
     .sucursales .sucursales__nuestroslocales {
       background-color: #fdecec;
-      width: 400px;
+      width: 350px;
       height: 200px;
       grid-area: nuestros-locales;
       display: flex;
@@ -2505,7 +2512,8 @@ body {
           margin: 0; }
       .sucursales .sucursales__locales .sucursales__img {
         border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px; }
+        border-bottom-right-radius: 10px;
+        width: 350px; }
     .sucursales .sucursales__locales:hover {
       transform: translateY(-15px);
       box-shadow: 15px 15px #e08686; } }
