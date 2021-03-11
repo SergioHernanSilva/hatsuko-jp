@@ -1149,6 +1149,7 @@ body {
                 font-size: 12pt;
                 font-weight: 400;
                 margin: 0;
+                text-align: center;
             
                 @mixin info-locales ($sucursal){
                     grid-area: $sucursal;
@@ -1325,7 +1326,7 @@ body {
             display: grid;
             grid-template-areas:
             "formulario-pedido";
-            grid-template-rows: 1250px;
+            grid-template-rows: 1350px;
             grid-template-columns: 250px;
             box-shadow: 15px 15px $rosa-nav;
             border-radius: 10px;

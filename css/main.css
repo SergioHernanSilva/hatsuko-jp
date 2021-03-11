@@ -963,7 +963,8 @@ body {
       .sucursales .sucursales__locales .sucursales__locales__info {
         font-size: 12pt;
         font-weight: 400;
-        margin: 0; }
+        margin: 0;
+        text-align: center; }
         .sucursales .sucursales__locales .sucursales__locales__info .sucursales__locales__info-lanus {
           grid-area: fotoLanus;
           margin: 0; }
@@ -1113,7 +1114,7 @@ body {
       margin: 20px 0 50px 0;
       display: grid;
       grid-template-areas: "formulario-pedido";
-      grid-template-rows: 1250px;
+      grid-template-rows: 1350px;
       grid-template-columns: 250px;
       box-shadow: 15px 15px #edb2b4;
       border-radius: 10px; }
