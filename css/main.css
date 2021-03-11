@@ -1114,7 +1114,7 @@ body {
       margin: 20px 0 50px 0;
       display: grid;
       grid-template-areas: "formulario-pedido";
-      grid-template-rows: 1350px;
+      grid-template-rows: 1300px;
       grid-template-columns: 250px;
       box-shadow: 15px 15px #edb2b4;
       border-radius: 10px; }
