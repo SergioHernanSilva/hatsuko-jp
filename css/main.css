@@ -731,7 +731,7 @@ body {
     text-transform: uppercase; }
 
 /*Pantallas*/
-@media (max-width: 576px) {
+@media screen and (min-width: 300px) and (max-width: 576px) {
   body {
     margin-top: 75px;
     background-color: #FFFF;
@@ -744,8 +744,8 @@ body {
     position: fixed;
     height: 80px; }
     .nav .nav__logo {
-      width: 85%;
-      height: 80%; }
+      width: 80%;
+      height: 75%; }
     .nav .nav__img {
       margin: 0;
       width: 70%;
@@ -757,7 +757,7 @@ body {
       top: 0;
       width: 100%;
       z-index: 100;
-      margin-top: -110%;
+      margin-top: -170%;
       transition: all 500ms ease; }
       .nav .nav__menu .nav__menu-list {
         background-color: #edb2b4;
@@ -804,6 +804,15 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #F9F4F4; }
+    .opcionesIndex .opcionesIndex__card {
+      height: 250px;
+      width: 250px;
+      display: flex;
+      justify-content: center;
+      font-size: 12pt;
+      margin: 5px 0; }
+    .opcionesIndex .opcionesIndex__button {
+      font-size: 16pt; }
   .d-block {
     width: auto;
     height: 250px; }
@@ -837,7 +846,8 @@ body {
       margin: 0; }
     .footer .footer__datos {
       font-size: 12pt;
-      margin: 0; }
+      margin: 0;
+      text-align: center; }
     .footer .footer__list {
       display: flex;
       flex-direction: column;
@@ -878,7 +888,7 @@ body {
     .menu .menu__sushi {
       margin: 30px;
       display: grid;
-      grid-template-columns: 300px;
+      grid-template-columns: 250px;
       grid-template-rows: auto;
       box-shadow: -15px 15px #e08686;
       grid-template-areas: "titulo titulo" "ingredientes ingredientes";
@@ -886,7 +896,7 @@ body {
     .menu .menu__ramen {
       margin: 30px;
       display: grid;
-      grid-template-columns: 300px;
+      grid-template-columns: 250px;
       grid-template-rows: auto;
       box-shadow: -15px 15px #e08686;
       grid-template-areas: "titulo titulo" "ingredientes ingredientes";
@@ -894,7 +904,7 @@ body {
     .menu .menu__buns {
       margin: 30px;
       display: grid;
-      grid-template-columns: 300px;
+      grid-template-columns: 250px;
       grid-template-rows: auto;
       box-shadow: -15px 15px #e08686;
       grid-template-areas: "titulo titulo" "ingredientes ingredientes";
@@ -902,7 +912,7 @@ body {
     .menu .menu__dumpling {
       margin: 30px;
       display: grid;
-      grid-template-columns: 300px;
+      grid-template-columns: 250px;
       grid-template-rows: auto;
       box-shadow: -15px 15px #e08686;
       grid-template-areas: "titulo titulo" "ingredientes ingredientes";
@@ -982,7 +992,7 @@ body {
       display: grid;
       grid-template-areas: "preg-resp preg-resp"  "formulario formulario";
       grid-template-rows: auto;
-      grid-template-columns: 360px;
+      grid-template-columns: 250px;
       box-shadow: 15px 15px #edb2b4; }
     .faq .faq__form {
       background-color: #fbdada;
@@ -991,15 +1001,15 @@ body {
       justify-content: center;
       align-items: center;
       grid-area: formulario;
-      width: 360px; }
+      width: 250px; }
     .faq .faq__preguntas {
       background-color: #fbdada;
       margin: 0;
       grid-area: preg-resp;
-      width: 360px; }
+      width: 250px; }
     .faq .faq__pregRta {
       margin: 0;
-      width: 360px;
+      width: 250px;
       height: auto; }
     .faq .faq__container {
       height: auto;
@@ -1013,8 +1023,9 @@ body {
       color: #0F0808;
       margin: 0;
       background-color: #fdecec;
-      width: 360px;
+      width: 250px;
       height: auto;
+      text-align: center;
       grid-area: pregunta; }
     .faq .faq__texto-preguntas {
       font-size: 12pt;
@@ -1023,7 +1034,7 @@ body {
       margin: 0;
       padding: 5px;
       background-color: #fdecec;
-      width: 360px;
+      width: 250px;
       height: auto;
       grid-area: pregunta;
       text-align: center;
@@ -1036,7 +1047,7 @@ body {
       margin: 0;
       padding: 5px;
       background-color: #fdecec;
-      width: 360px;
+      width: 250px;
       height: auto;
       grid-area: pregunta;
       text-align: center; }
@@ -1047,9 +1058,9 @@ body {
       justify-content: center;
       align-content: center;
       align-items: center;
-      width: 360px; }
+      width: 250px; }
     .faq .form__completar {
-      width: 360px;
+      width: 250px;
       height: 550px;
       background-color: #0F0808; }
     .faq .form__titulo {
@@ -1057,7 +1068,7 @@ body {
       color: #FFFF;
       margin: 0;
       background-color: #0F0808;
-      width: 360px;
+      width: 250px;
       height: 80px;
       grid-area: pregunta;
       display: flex;
@@ -1067,12 +1078,12 @@ body {
       text-align: center; }
     .faq .form__input {
       font-size: 12pt;
-      margin: 10px 30px;
+      margin: 10px 20px;
       width: 85%;
       height: 25px; }
     .faq .form__input-textArea {
       font-size: 16pt;
-      margin: 10px 30px;
+      margin: 10px 20px;
       width: 85%;
       height: 200px; }
     .faq .form__cta {
@@ -1095,14 +1106,15 @@ body {
     background-color: #FFFF;
     margin-top: 0;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    max-width: 90%; }
     .pedido .pedido__formulario {
       background-color: #fdecec;
       margin: 20px 0 50px 0;
       display: grid;
       grid-template-areas: "formulario-pedido";
-      grid-template-rows: 1120px;
-      grid-template-columns: 350px;
+      grid-template-rows: 1250px;
+      grid-template-columns: 250px;
       box-shadow: 15px 15px #edb2b4;
       border-radius: 10px; }
     .pedido .pedido__container {
@@ -1134,20 +1146,20 @@ body {
       grid-area: formulario-pedido; }
     .pedido .pedido__input-name {
       font-size: 16pt;
-      margin: 5px 30px;
-      width: 290px; }
+      margin: 5px 10px;
+      width: 90%; }
     .pedido .pedido__input-ad {
       font-size: 16pt;
-      margin: 5px 30px;
-      width: 290px; }
+      margin: 5px 10px;
+      width: 90%; }
     .pedido .pedido__input-ph {
       font-size: 16pt;
-      margin: 5px 30px;
-      width: 290px; }
+      margin: 5px 10px;
+      width: 90%; }
     .pedido .pedido__input-mail {
       font-size: 16pt;
-      margin: 5px 30px;
-      width: 290px; }
+      margin: 5px 10px;
+      width: 90%; }
     .pedido .pedido__productos {
       width: 100px;
       font-size: 14pt; }
@@ -1156,8 +1168,8 @@ body {
       margin: 5px;
       width: 30px; }
     .pedido .form__input-textArea1 {
-      width: 290px;
-      margin: 10px 30px; }
+      width: 90%;
+      margin: 10px 10px; }
     .pedido .pedido__pago {
       font-size: 12pt;
       display: inline-block;
@@ -1541,7 +1553,10 @@ body {
       margin: 15px;
       border: 2px solid #FFFF;
       border-radius: 10px;
-      text-transform: uppercase; } }
+      text-transform: uppercase; }
+  /*Pedido*/
+  .pedido {
+    max-width: 100%; } }
 
 @media screen and (min-width: 768px) and (max-width: 922px) {
   .nav {

@@ -859,7 +859,8 @@ body {
 }
 
     /*Pantallas*/
-@media (max-width: 576px){
+
+@media screen and (min-width: 300px) and (max-width: 576px){
 
     body {
         margin-top: 75px;
@@ -875,8 +876,8 @@ body {
         height: 80px;
 
         .nav__logo {
-            width: 85%;
-            height: 80%;
+            width: 80%;
+            height: 75%;
         }
         .nav__img {
             margin: 0;
@@ -890,7 +891,7 @@ body {
             top: 0;
             width: 100%;
             z-index: 100;
-            margin-top: -110%;
+            margin-top: -170%;
             transition: all 500ms ease;
     
             .nav__menu-list {
@@ -949,6 +950,18 @@ body {
         display: flex;
         flex-direction: column;
         background-color: $rosa-light;
+    
+        .opcionesIndex__card {
+            height: 250px;
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            font-size: 12pt;
+            margin: 5px 0;
+        }
+        .opcionesIndex__button {
+            font-size: 16pt;
+        }
     } 
     .d-block {
         width: auto;
@@ -993,6 +1006,7 @@ body {
         .footer__datos {
             font-size: 12pt;
             margin: 0;
+            text-align: center;
         }
         .footer__list {
             display: flex;
@@ -1043,7 +1057,7 @@ body {
         @mixin menu {
             margin: 30px;
             display: grid;
-            grid-template-columns: 300px;
+            grid-template-columns: 250px;
             grid-template-rows: auto;
             box-shadow: -15px 15px $rosa-button;
         }
@@ -1177,7 +1191,7 @@ body {
             "preg-resp preg-resp" 
             "formulario formulario";
             grid-template-rows: auto;
-            grid-template-columns: 360px;
+            grid-template-columns: 250px;
             box-shadow: 15px 15px $rosa-nav; 
         }
         .faq__form {
@@ -1187,17 +1201,17 @@ body {
             justify-content: center;
             align-items: center;
             grid-area: formulario;
-            width: 360px;
+            width: 250px;
         }
         .faq__preguntas {
             background-color: #fbdada;
             margin: 0;
             grid-area: preg-resp;
-            width: 360px;
+            width: 250px;
         }
         .faq__pregRta {
             margin: 0;
-            width: 360px;
+            width: 250px;
             height: auto;
         }
         .faq__container {
@@ -1213,8 +1227,9 @@ body {
             color:  $negro;
             margin: 0;
             background-color: $rosa-claro;
-            width: 360px;
+            width: 250px;
             height: auto;
+            text-align: center;
             grid-area: pregunta;
         }
         @mixin textos ($puntos, $peso){
@@ -1224,7 +1239,7 @@ body {
             margin: 0;
             padding: 5px;
             background-color: $rosa-claro;
-            width: 360px;
+            width: 250px;
             height: auto;
             grid-area: pregunta;
             text-align: center;
@@ -1244,10 +1259,10 @@ body {
             justify-content: center;
             align-content: center;
             align-items: center;
-            width: 360px;
+            width: 250px;
         }
         .form__completar {
-            width: 360px;
+            width: 250px;
             height: 550px;
             background-color:  $negro;
         }
@@ -1256,7 +1271,7 @@ body {
             color: $blanco;
             margin: 0;
             background-color: $negro;
-            width: 360px;
+            width: 250px;
             height: 80px;
             grid-area: pregunta;
             display: flex;
@@ -1267,13 +1282,13 @@ body {
         }
         .form__input {
             font-size: 12pt;
-            margin: 10px 30px;
+            margin: 10px 20px;
             width: 85%;
             height: 25px;
         }
         .form__input-textArea {
             font-size: 16pt;
-            margin: 10px 30px;
+            margin: 10px 20px;
             width: 85%;
             height: 200px;
         }
@@ -1302,6 +1317,7 @@ body {
         margin-top: 0;
         display: flex;
         justify-content: center;
+        max-width: 90%;
 
         .pedido__formulario {
             background-color: $rosa-claro;
@@ -1309,8 +1325,8 @@ body {
             display: grid;
             grid-template-areas:
             "formulario-pedido";
-            grid-template-rows: 1120px;
-            grid-template-columns: 350px;
+            grid-template-rows: 1250px;
+            grid-template-columns: 250px;
             box-shadow: 15px 15px $rosa-nav;
             border-radius: 10px;
         }
@@ -1347,23 +1363,23 @@ body {
         }
         .pedido__input-name {
             font-size: 16pt;
-            margin: 5px 30px;
-            width: 290px;
+            margin: 5px 10px;
+            width: 90%;
         }
         .pedido__input-ad {
             font-size: 16pt;
-            margin: 5px 30px;
-            width: 290px;
+            margin: 5px 10px;
+            width: 90%;
         }
         .pedido__input-ph {
             font-size: 16pt;
-            margin: 5px 30px;
-            width: 290px;
+            margin: 5px 10px;
+            width: 90%;
         }
         .pedido__input-mail {
             font-size: 16pt;
-            margin: 5px 30px;
-            width: 290px;
+            margin: 5px 10px;
+            width: 90%;
         }
         .pedido__productos {
             width: 100px;
@@ -1375,8 +1391,8 @@ body {
             width: 30px;
         }
         .form__input-textArea1 {
-            width: 290px;
-            margin: 10px 30px;
+            width: 90%;
+            margin: 10px 10px;
         }
         .pedido__pago {
             font-size: 12pt;
@@ -1850,7 +1866,11 @@ body {
             border-radius: 10px;
             text-transform: uppercase;
         }
-    }        
+    }
+    /*Pedido*/
+    .pedido {
+        max-width: 100%;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 922px) {
     .nav {
