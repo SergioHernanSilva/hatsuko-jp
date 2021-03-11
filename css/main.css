@@ -1108,7 +1108,7 @@ body {
     margin-top: 0;
     display: flex;
     justify-content: center;
-    max-width: 90%; }
+    max-width: 100%; }
     .pedido .pedido__formulario {
       background-color: #fdecec;
       margin: 20px 0 50px 0;
@@ -1557,7 +1557,101 @@ body {
       text-transform: uppercase; }
   /*Pedido*/
   .pedido {
-    max-width: 100%; } }
+    background-color: #FFFF;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    max-width: 100%; }
+    .pedido .pedido__formulario {
+      background-color: #fdecec;
+      margin: 20px 0 50px 0;
+      display: grid;
+      grid-template-areas: "formulario-pedido";
+      grid-template-rows: 1150px;
+      grid-template-columns: 500px;
+      box-shadow: 15px 15px #edb2b4;
+      border-radius: 10px; }
+    .pedido .pedido__container {
+      background-image: #fdecec;
+      margin: 20px 0;
+      display: inline-block; }
+    .pedido .pedido__titulo {
+      font-size: 20pt;
+      color: #0F0808;
+      margin: 0;
+      background-color: #fdecec;
+      width: 100%;
+      height: auto;
+      grid-area: pregunta;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .pedido .pedido__subtitulo {
+      font-size: 18pt;
+      color: #e08686;
+      margin: 20px 30px;
+      grid-area: formulario-pedido;
+      text-align: center; }
+    .pedido .pedido__datos {
+      font-size: 12pt;
+      margin: 0 0 0 30px;
+      color: #0F0808;
+      grid-area: formulario-pedido; }
+    .pedido .pedido__input-name {
+      font-size: 16pt;
+      margin: 5px 10px;
+      width: 95%; }
+    .pedido .pedido__input-ad {
+      font-size: 16pt;
+      margin: 5px 10px;
+      width: 95%; }
+    .pedido .pedido__input-ph {
+      font-size: 16pt;
+      margin: 5px 10px;
+      width: 95%; }
+    .pedido .pedido__input-mail {
+      font-size: 16pt;
+      margin: 5px 10px;
+      width: 95%; }
+    .pedido .pedido__productos {
+      width: 100px;
+      font-size: 14pt; }
+    .pedido .pedido__input-cant {
+      font-size: 16pt;
+      margin: 5px;
+      width: 30px; }
+    .pedido .form__input-textArea1 {
+      width: 95%;
+      margin: 10px 10px; }
+    .pedido .pedido__pago {
+      font-size: 12pt;
+      display: inline-block;
+      margin: 5px 5px 10px 30px;
+      padding: 0;
+      grid-area: formulario; }
+    .pedido .pedido__input-cash {
+      margin: 5px 30px 0 0; }
+    .pedido .pedido__nl {
+      font: 400 18pt "Kanit", sans-serif;
+      margin: 0; }
+    .pedido .pedido__cbx {
+      margin-top: 15px; }
+    .pedido .form__cta-pedido {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .pedido .form__button-pedido {
+      background-color: #e08686;
+      color: #FFFF;
+      font-size: 12pt;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 5px;
+      margin: 5px 30px;
+      border: none;
+      border-radius: 5px;
+      text-transform: uppercase; } }
 
 @media screen and (min-width: 768px) and (max-width: 922px) {
   .nav {
